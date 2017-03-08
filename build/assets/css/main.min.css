@@ -973,6 +973,42 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
 
+.ticketcon {
+  width: 100%;
+  display: inline-block; }
+
+.tickettext {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 36%; }
+
+.rulelink {
+  width: 40%;
+  height: 6%;
+  background: rgba(22, 67, 78, 0.6);
+  position: absolute;
+  left: 50%;
+  bottom: -1%;
+  margin: 0 0 0 -20%;
+  z-index: 2; }
+
+.tickerule {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 16; }
+
+.tmallrule {
+  background: rgba(255, 255, 255, 0.7) url("../img/tmall.png") center no-repeat;
+  background-size: 100% auto; }
+
+.storerule {
+  background: rgba(255, 255, 255, 0.7) url("../img/store.png") center no-repeat;
+  background-size: 100% auto; }
+
 /*****************************
 * 常用
 *****************************/

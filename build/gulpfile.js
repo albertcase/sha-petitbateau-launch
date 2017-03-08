@@ -35,7 +35,8 @@ var cssSrc = ['_settings.scss', '_reset.scss', '_style.scss'],
     imgSrc = 'src/img/**',
     imgDest = 'assets/img',
     cssRevSrc = 'src/css/revCss',
-    condition = true;
+    condition = true,
+    mhtmlbool = false;
 
 function changePath(basePath){
     var nowCssSrc = [];
@@ -148,7 +149,7 @@ gulp.task('miniCss', function(){
 
 //压缩Html/更新引入文件版本
 gulp.task('miniHtml', function () {
-    if(condition){
+    if(mhtmlbool){
         htmlsrc = ['src/*.html']
     }else{
         htmlsrc = ['src/rev/**/*.json', 'src/*.html']
@@ -156,13 +157,13 @@ gulp.task('miniHtml', function () {
     return gulp.src(htmlsrc) // 'src/rev/**/*.json'
         .pipe(revCollector())
         .pipe(gulpif(
-            condition, minifyHtml({
+            mhtmlbool, minifyHtml({
                 empty: true,
                 spare: true,
                 quotes: true
             })
         ))
-        .pipe(gulp.dest('../'));
+        .pipe(gulp.dest('../test'));
 });
 
 gulp.task('delRevCss', function(){
@@ -195,7 +196,7 @@ gulp.task('build', function (done) {
          //['lintJs'],
          ['revCollectorCss'],
          ['miniCss', 'miniJs'],
-         ['miniHtml', 'delRevCss'],
+         ['miniHtml', 'delRevCss'],    
     done);
 });
 
