@@ -17,6 +17,13 @@ class PageController extends Controller {
 		$this->render('result');
 	}
 
+	public function testAction() {
+		
+		global $user;
+		echo $user->openid;exit;
+		$this->render('test');
+	}
+
 	public function clearCookieAction() {
 		setcookie('_user', json_encode($user), time(), '/');
 		$this->statusPrint('success');
