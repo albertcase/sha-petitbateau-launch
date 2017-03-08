@@ -18,7 +18,6 @@ class PageController extends Controller {
 	}
 
 	public function testAction() {
-		
 		global $user;
 		echo $user->openid;exit;
 		$this->render('test');

@@ -16,6 +16,7 @@ class RequestListener {
 	}
 
 	private function authorize() {
+		echo 1;exit;
 		global $user;
 		$authorize_url = json_decode(AUTHORIZE_URL);
         if(!$user->uid) {
