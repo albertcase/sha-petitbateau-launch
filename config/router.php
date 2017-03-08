@@ -12,4 +12,4 @@ $routers['/'] = array('CampaignBundle\Page', 'index');
 $routers['/clear'] = array('CampaignBundle\Page', 'clearCookie');
 $routers['/apply'] = array('CampaignBundle\Page', 'apply');
 $routers['/result'] = array('CampaignBundle\Page', 'result');
-$routers['/test'] = array('CampaignBundle\Page', 'test');
+$routers['/testoauth'] = array('CampaignBundle\Page', 'test');
