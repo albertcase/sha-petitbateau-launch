@@ -31,6 +31,7 @@ class WechatController extends Controller {
 			if($access_token->scope == 'snsapi_userinfo') {
 				$param['openid'] = $access_token->openid;
 				$param['access_token'] = $access_token->access_token;
+				var_dump($param);exit;
 			}
 			$this->redirect($url);
 		}
