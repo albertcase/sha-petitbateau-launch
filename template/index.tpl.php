@@ -115,7 +115,7 @@
         "/build/assets/img/ware-3.png"
     ], createInfo = {
         "name": "",
-        "colr": ""
+        "color": ""
     };
 
     
@@ -154,6 +154,8 @@
             $(".confirm").val(createInfo["name"]);
             _v.sectionChange("step2");
         }
+
+        createInfo["color"] = "";
     })
 
 
