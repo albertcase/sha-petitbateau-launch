@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
 </head>
 <body>
+<?php print $nickname;?>
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>

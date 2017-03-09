@@ -6,7 +6,9 @@ use Core\Controller;
 class PageController extends Controller {
 
 	public function indexAction() {
-		$this->render('index');
+		global $user;
+
+		$this->render('index', array('nickname'=> $user->nickname));
 	}
 
 	public function applyAction() {
@@ -14,7 +16,15 @@ class PageController extends Controller {
 	}
 
 	public function resultAction() {
-		$this->render('result');
+		$request = $this->request;
+		$id = $request->query->get('id') ? $request->query->get('id') : 0;
+		if (!$id) {
+			$this->redirect("/");
+		}
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$boat = $DatabaseAPI->getBoatById($id);
+		$friends = $DatabaseAPI->getFriendsById($id);
+		$this->render('result', array('name' => $boat->name, 'color' => $boat->color, 'friends'=> $friends));
 	}
 
 	public function testAction() {
