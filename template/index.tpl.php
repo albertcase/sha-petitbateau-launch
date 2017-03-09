@@ -158,8 +158,14 @@
 
 
     $(".goBtn").on("click", function(){
-        console.log(createInfo);
-        location.href = "result.html";
+        if($(this).hasClass("disabled")) return false;
+        $(this).addClass("disabled");
+        pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(){
+            if(data.status = 1){
+                location.href = "/result?id=" + data.msg;
+            } 
+            $(".goBtn").removeClass("disabled");
+        });
     })
     
 
