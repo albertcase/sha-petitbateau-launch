@@ -165,7 +165,7 @@
         pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(data){
             console.log(data);
             if(data.status = 1){
-                location.href = "/result?id=" + data.msg;
+                //location.href = "/result?id=" + data.msg;
             } 
             $(".goBtn").removeClass("disabled");
         }, function(data){
