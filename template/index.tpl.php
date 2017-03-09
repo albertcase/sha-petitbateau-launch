@@ -154,8 +154,6 @@
             $(".confirm").val(createInfo["name"]);
             _v.sectionChange("step2");
         }
-
-        createInfo["color"] = "";
     })
 
 
