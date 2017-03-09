@@ -33,6 +33,7 @@ class PageController extends Controller {
 	}
 
 	public function resultAction() {
+		global $user;
 		$request = $this->request;
 		$id = $request->query->get('id') ? $request->query->get('id') : 0;
 		if (!$id) {
@@ -40,8 +41,13 @@ class PageController extends Controller {
 		}
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$boat = $DatabaseAPI->loadMakeById($id);
+		if ($user->uid == $boat->uid) {
+			$ismy = 1;
+		} else {
+			$ismy = 0;
+		}
 		$friends = $DatabaseAPI->getFriendsById($id);
-		$this->render('result', array('name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends));
+		$this->render('result', array('ismy' => $ismy, 'name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends));
 	}
 
 	public function testAction() {
