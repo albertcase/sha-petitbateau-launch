@@ -28,10 +28,10 @@ class WechatAPI {
 	}
 
 	public function isUserSubscribed($openid) {
-		$url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token={$this->_access_token}&openid={$openid}&lang=zh_CN";
+		$url = "http://pbwechat.samesamechina.com/wechat/user/status?openid=". $openid;
 		$return = file_get_contents($url);
 		$rs = json_decode($return);
-		if(isset($rs->subscribe) && $rs->subscribe == 1)
+		if(isset($rs->code) && $rs->code == 10)
 		  return TRUE;
 		else
 		  return FALSE;
