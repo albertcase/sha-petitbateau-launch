@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
 </head>
-<body>
+<body data-ismy="<?php print $ismy;?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -32,7 +32,6 @@
     </div>
   <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
-<?php print $ismy;?>
 <?php print json_encode($friends);?>
 
 <!-- 横屏代码 -->
@@ -43,10 +42,15 @@
     </div>
 </div>
 
-<div class="shareTips hidden"></div>
-<div class="qrcode hidden">
-    <img src="/build/assets/img/qrcode.png" alt="" width="100%">
-</div>
+
+<?php
+    if($ismy){
+        echo '<div class="shareTips hidden"></div>
+            <div class="qrcode hidden">
+                <img src="/build/assets/img/qrcode.png" alt="" width="100%">
+            </div>';
+    }
+?> 
 
 <div id="dreambox">
     <div class="section" id="result">
@@ -56,11 +60,13 @@
             </div>
 
             <div class="footerArea">
-               <!-- <a href="javascript:void(0);" class="btn iadd"></a>
-               <img src="/build/assets/img/iadd.png?v=25a1cee5d4" width="100%"> -->
-               <a href="javascript:void(0);" class="btn tadd"></a>
-               <a href="javascript:void(0);" class="btn iplay"></a>
-               <img src="/build/assets/img/hyBtn.png" width="100%">
+                <?php
+                    if($ismy){
+                        echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
+                    }else{
+                        echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                    }
+                ?>  
             </div>
         </div>
     </div>
@@ -139,7 +145,7 @@
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc_friend"] = "Petit Bateau丨快来帮我的小船加速吧！";
-    shareArr["_link"] = "Petit Bateau丨快来帮我的小船加速吧！";
+    shareArr["_link"] = window.location.href;
 
 
     pfun.loadingFnDoing(allimg, function(){
