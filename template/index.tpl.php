@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
 </head>
 <body>
 <div class="loading" >
@@ -44,22 +44,22 @@
 <div id="dreambox">
     <div class="section" id="index">
         <div class="slogan">
-            <img src="/build/assets/img/slogan.png?v=5b2bbcf0c1" alt="" width="100%">
+            <img src="/build/assets/img/slogan.png" alt="" width="100%">
         </div>
 
         <div class="btnArea">
             <a href="javascript:void(0);" class="btn startBtn"></a>
-            <img src="/build/assets/img/t-1.png?v=c069378db8" alt="" width="100%">
+            <img src="/build/assets/img/t-1.png" alt="" width="100%">
         </div>
 
-        <img src="/build/assets/img/bridge.png?v=0099348449" class="bridge" alt="" width="100%">
+        <img src="/build/assets/img/bridge.png" class="bridge" alt="" width="100%">
     </div>
 
     <div class="section" id="step1">
         <div class="stepgo stepgo-1">
             <div class="step1-t1">
                 <input type="text" name="username" class="username" value="<?php print $nickname;?>" placeholder="您的昵称">
-                <img src="/build/assets/img/step-1-text-01.png?v=338f6655b6" alt="" width="100%">
+                <img src="/build/assets/img/step-1-text-01.png" alt="" width="100%">
             </div>
             <div class="step1-t2">
                 <ul class="colorlist">
@@ -69,7 +69,7 @@
                     <li class="blue hover" data-val="blue"></li>
                 </ul>
                 <a href="javascript:void(0);" class="btn createBtn"></a>
-                <img src="/build/assets/img/step-1-text-02.png?v=1335f4e156" alt="" width="100%">
+                <img src="/build/assets/img/step-1-text-02.png" alt="" width="100%">
             </div>
         </div>
     </div>
@@ -78,12 +78,12 @@
     <div class="section" id="step2">
         <div class="stepgo stepgo-2">
             <div class="step1-t1">
-                <input type="text" name="username" value="ZEO" readonly>
-                <img src="/build/assets/img/step-2-text-01.png?v=4fb3e7efe0" alt="" width="100%">
+                <input type="text" name="username" value="<?php print $nickname;?>" class="confirm" readonly>
+                <img src="/build/assets/img/step-2-text-01.png" alt="" width="100%">
             </div>
             <div class="step1-t2">
                 <a href="javascript:void(0);" class="btn goBtn"></a>
-                <img src="/build/assets/img/step-2-text-02.png?v=7878476665" alt="" width="100%">
+                <img src="/build/assets/img/step-2-text-02.png" alt="" width="100%">
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
     </div>
 
 </div>
-<script type="text/javascript" src="/build/assets/js/main.min.js?v=26260f2a99"></script>
+<script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
         "/build/assets/img/bg.jpg",
@@ -112,7 +112,10 @@
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
         "/build/assets/img/ware-3.png"
-    ];
+    ], createInfo = {
+        "name": "",
+        "color": ""
+    };
 
     
     pfun.loadingFnDoing(allimg, function(){
@@ -141,19 +144,21 @@
     })
 
     $(".createBtn").on("click", function(){
-        var boatname = $(".username").val();
-        var boatcolor = $(".colorlist li.hover").attr("data-val");
+        createInfo["name"] = $(".username").val();
+        createInfo["color"] = $(".colorlist li.hover").attr("data-val");
 
-        if(!boatname || !boatcolor){
+        if(!createInfo["name"] || !createInfo["color"]){
             pfun.formErrorTips("创建信息有误!");
         }else{
-            console.log("创建成功！");
+            // console.log("创建成功！");
+            $(".confirm").val(createInfo["name"]);
             _v.sectionChange("step2");
         }
     })
 
 
     $(".goBtn").on("click", function(){
+        console.log(createInfo);
         location.href = "result.html";
     })
     
