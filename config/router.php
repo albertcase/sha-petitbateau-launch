@@ -13,3 +13,4 @@ $routers['/clear'] = array('CampaignBundle\Page', 'clearCookie');
 $routers['/apply'] = array('CampaignBundle\Page', 'apply');
 $routers['/result'] = array('CampaignBundle\Page', 'result');
 $routers['/testoauth'] = array('CampaignBundle\Page', 'test');
+$routers['/login'] = array('CampaignBundle\Page', 'login');
