@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
 </head>
 <body>
 <div class="loading" >
@@ -31,8 +31,7 @@
     </div>
   <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
-<?php print $name;?>
-<?php print $color;?>
+
 <?php print json_encode($friends);?>
 
 <!-- 横屏代码 -->
@@ -45,14 +44,14 @@
 
 <div class="shareTips hidden"></div>
 <div class="qrcode hidden">
-    <img src="/build/assets/img/qrcode.png?v=101d0b0710" alt="" width="100%">
+    <img src="/build/assets/img/qrcode.png" alt="" width="100%">
 </div>
 
 <div id="dreambox">
     <div class="section" id="result">
         <div class="stepgo stepgo-3">
             <div class="lave">
-                <img src="/build/assets/img/lave-1.png?v=d43e83b15d" width="100%" alt="">
+                <img src="/build/assets/img/lave-1.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
@@ -60,7 +59,7 @@
                <img src="/build/assets/img/iadd.png?v=25a1cee5d4" width="100%"> -->
                <a href="javascript:void(0);" class="btn tadd"></a>
                <a href="javascript:void(0);" class="btn iplay"></a>
-               <img src="/build/assets/img/hyBtn.png?v=e257286019" width="100%">
+               <img src="/build/assets/img/hyBtn.png" width="100%">
             </div>
         </div>
     </div>
@@ -77,8 +76,8 @@
         <!-- 3/3 -->
         <div class="ware el boatstep4">
             <div class="r_boat">
-                <p>友谊的小船</p>
-                <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
+                <p><?php print $name;?></p>
+                <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
         </div>
 
@@ -93,7 +92,7 @@
         <!-- 2/3 -->
         <!-- <div class="ware el boatstep3">
             <div class="r_boat">
-                <span><img src="/build/assets/img/jiasu.png?v=c735c577f4" width="100%" alt=""></span>
+                <span><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>
                 <p>友谊的小船</p>
                 <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
             </div>
@@ -104,7 +103,7 @@
         <!-- 1/3 -->
         <!-- <div class="ware el boatstep2">
             <div class="r_boat">
-                <span><img src="/build/assets/img/jiasu.png?v=c735c577f4" width="100%" alt=""></span>
+                <span><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>
                 <p>友谊的小船</p>
                 <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
             </div>
@@ -127,7 +126,7 @@
 
 </div>
 
-<script type="text/javascript" src="/build/assets/js/main.min.js?v=26260f2a99"></script>
+<script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
         "/build/assets/img/bg.jpg?v=73d8f4dc4c",
