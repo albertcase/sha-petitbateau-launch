@@ -165,9 +165,9 @@ class DatabaseAPI {
 	 * 
 	 */
 	public function insertMake($data){
-		$sql = "INSERT INTO `product` SET `uid` = ?, `nickname` = ?, `background` = ?, `color` = ?, `content` = ?"; 
+		$sql = "INSERT INTO `boat` SET `uid` = ?, `name` = ?, `color` = ?"; 
 		$res = $this->connect()->prepare($sql); 
-		$res->bind_param("sssss", $data->uid, $data->nickname, $data->background, $data->color, $data->content);
+		$res->bind_param("sss", $data->uid, $data->name, $data->color);
 		if($res->execute()) 
 			return $res->insert_id;
 		else 
@@ -175,45 +175,41 @@ class DatabaseAPI {
 	}
 
 	public function loadMakeById($id){
-		$sql = "SELECT `id`, `uid`, `nickname`, `background`, `color`, `content` FROM `product` WHERE `id` = ?"; 
+		$sql = "SELECT `id`, `uid`, `name`, `color` FROM `boat` WHERE `id` = ?"; 
 		$res = $this->connect()->prepare($sql);
 		$res->bind_param("s", $id);
 		$res->execute();
-		$res->bind_result($id, $uid, $nickname, $background, $color, $content);
+		$res->bind_result($id, $uid, $name, $color);
 		if($res->fetch()) {
 			$info = new \stdClass();
 			$info->id = $id;
 			$info->uid = $uid;
-			$info->nickname = $nickname;
-			$info->background = $background;
+			$info->name = $name;
 			$info->color = $color;
-			$info->$content = $content;
 			return $info;
 		}
 		return NULL;
 	}
 
 	public function loadMakeByUid($uid){
-		$sql = "SELECT `id`, `uid`, `nickname`, `background`, `color`, `content` FROM `product` WHERE `uid` = ?"; 
+		$sql = "SELECT `id`, `uid`, `name`, `color` FROM `boat` WHERE `uid` = ?"; 
 		$res = $this->connect()->prepare($sql);
 		$res->bind_param("s", $uid);
 		$res->execute();
-		$res->bind_result($id, $uid, $nickname, $background, $color, $content);
+		$res->bind_result($id, $uid, $name, $color);
 		if($res->fetch()) {
 			$info = new \stdClass();
 			$info->id = $id;
 			$info->uid = $uid;
-			$info->nickname = $nickname;
-			$info->background = $background;
+			$info->name = $name;
 			$info->color = $color;
-			$info->content = $content;
 			return $info;
 		}
 		return NULL;
 	}
 
-	public function loadListByUid($uid) {
-		$sql = "SELECT * FROM `product` WHERE uid in (select fuid from band where uid = '".intval($uid)."')"; 
+	public function getFriendsById($bid) {
+		$sql = "SELECT uid,nickname FROM `user` WHERE uid in (select uid from ballot where bid = '".intval($bid)."')"; 
 		$res = $this->db->query($sql);
 		$data = array();
 		while($rows = $res->fetch_array(MYSQLI_ASSOC))
@@ -222,19 +218,7 @@ class DatabaseAPI {
 		}	
 		return $data;
 	}
-
-	/**
-	 * 
-	 */
-	public function bandShare($uid, $fuid){
-		$sql = "INSERT INTO `band` SET `uid` = ?, `fuid` = ?"; 
-		$res = $this->connect()->prepare($sql); 
-		$res->bind_param("ss", $uid, $fuid);
-		if($res->execute()) 
-			return $res->insert_id;
-		else 
-			return FALSE;
-	}
+	
 
 	public function insertSubmit($data){
 		$sql = "INSERT INTO `submit` SET `uid` = ?, `sex` = ?, `name` = ?, `mobile` = ?, `email` = ?, `store` = ?"; 

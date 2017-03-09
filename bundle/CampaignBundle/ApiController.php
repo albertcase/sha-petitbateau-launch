@@ -43,4 +43,52 @@ class ApiController extends Controller {
 		}
     }
 
+    public function makeAction() {
+
+    	global $user;
+
+    	$request = $this->request;
+    	$fields = array(
+			'name' => array('notnull', '120'),
+			'color' => array('cellphone', '121'),
+		);
+		$request->validation($fields);
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$data = new \stdClass();
+		$data->uid = $user->uid;
+		$data->name = $request->request->get('name');
+		$data->color = $request->request->get('color');
+		$rs = $DatabaseAPI->insertMake($data);
+		if($rs) {
+			$data = array('status' => 1, 'msg' => $rs);
+			$this->dataPrint($data);
+		} else {
+			$this->statusPrint('0', 'failed');
+		}
+    }
+
+    public function likeAction() {
+
+    	global $user;
+
+    	$request = $this->request;
+    	$fields = array(
+			'id' => array('notnull', '120'),
+		);
+		$request->validation($fields);
+		$id = $request->request->get('id');
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$boat = $DatabaseAPI->loadMakeById($id);
+		if ($boat->uid == $user->uid) {
+			$this->statusPrint('0', 'failed');
+		}
+		$rs = $DatabaseAPI->likeBoat($user->uid, $id);
+		if($rs) {
+			$data = array('status' => 1, 'msg' =>'成功');
+			$this->dataPrint($data);
+		} else {
+			$this->statusPrint('0', 'failed');
+		}
+    }
+
 }

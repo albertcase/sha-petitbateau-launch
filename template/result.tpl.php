@@ -31,7 +31,9 @@
     </div>
   <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
-
+<?php print $name;?>
+<?php print $color;?>
+<?php print json_encode($friends);?>
 
 <!-- 横屏代码 -->
 <div id="orientLayer" class="mod-orient-layer">
