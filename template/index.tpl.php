@@ -18,6 +18,7 @@
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
+    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
 <div class="loading" >
@@ -120,9 +121,8 @@
     
     pfun.loadingFnDoing(allimg, function(){
         $(".loading").css({"visibility": "hidden"});
-        // pfun.overscroll(document.querySelector("#chatArea")); 
         _v.sectionChange("index");
-        // pfun.init();
+        pfun.init();
 
         // Setup FastClick.
         FastClick.attach(document.body);
@@ -160,11 +160,14 @@
     $(".goBtn").on("click", function(){
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
-        pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(){
+        pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(data){
             if(data.status = 1){
                 location.href = "/result?id=" + data.msg;
             } 
             $(".goBtn").removeClass("disabled");
+        }, function(data){
+            console.log(6);
+            console.log(data);
         });
     })
     

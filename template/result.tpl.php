@@ -140,7 +140,7 @@
         $(".loading").css({"visibility": "hidden"});
 
         _v.sectionChange("result");
-        // pfun.init();
+        pfun.init();
 
         // Setup FastClick.
         FastClick.attach(document.body);
