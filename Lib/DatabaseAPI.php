@@ -208,8 +208,8 @@ class DatabaseAPI {
 		return NULL;
 	}
 
-	public function loadListByUid($uid) {
-		$sql = "SELECT * FROM `product` WHERE uid in (select fuid from band where uid = '".intval($uid)."')"; 
+	public function getFriendsById($bid) {
+		$sql = "SELECT uid,nickname FROM `user` WHERE uid in (select uid from ballot where bid = '".intval($bid)."')"; 
 		$res = $this->db->query($sql);
 		$data = array();
 		while($rows = $res->fetch_array(MYSQLI_ASSOC))
@@ -218,7 +218,6 @@ class DatabaseAPI {
 		}	
 		return $data;
 	}
-
 	
 
 	public function insertSubmit($data){

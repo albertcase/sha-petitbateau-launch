@@ -78,7 +78,7 @@ class ApiController extends Controller {
 		$request->validation($fields);
 		$id = $request->request->get('id');
 		$DatabaseAPI = new \Lib\DatabaseAPI();
-		$boat = $DatabaseAPI->getBoatById($id);
+		$boat = $DatabaseAPI->loadMakeById($id);
 		if ($boat->uid == $user->uid) {
 			$this->statusPrint('0', 'failed');
 		}

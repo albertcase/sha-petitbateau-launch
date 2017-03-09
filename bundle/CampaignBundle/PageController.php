@@ -39,7 +39,7 @@ class PageController extends Controller {
 			$this->redirect("/");
 		}
 		$DatabaseAPI = new \Lib\DatabaseAPI();
-		$boat = $DatabaseAPI->getBoatById($id);
+		$boat = $DatabaseAPI->loadMakeById($id);
 		$friends = $DatabaseAPI->getFriendsById($id);
 		$this->render('result', array('name' => $boat->name, 'color' => $boat->color, 'friends'=> $friends));
 	}
