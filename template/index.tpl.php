@@ -115,7 +115,7 @@
         "/build/assets/img/ware-3.png"
     ], createInfo = {
         "name": "",
-        "color": ""
+        "colr": ""
     };
 
     
