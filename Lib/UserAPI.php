@@ -23,6 +23,8 @@ class UserAPI extends Base {
         $data = new \stdClass();
         $data->uid = $_user->uid;
         $data->openid = $_user->openid;
+        $data->nickname = $_user->nickname;
+        $data->headimgurl = $_user->headimgurl;
         // if($re = $this->_db->findInfoByUid($_user->uid)) {
         //   $data->info = $re;
         // }
@@ -47,12 +49,12 @@ class UserAPI extends Base {
     // $r->openid = 'asf';
     // return $r;
     if(USER_STORAGE == 'COOKIE') {
-      if(isset($_COOKIE['_user'])) {
-        return json_decode($_COOKIE['_user']);
+      if(isset($_COOKIE['_user0206'])) {
+        return json_decode($_COOKIE['_user0206']);
       }
     } else {
-      if(isset($_SESSION['_user'])) {
-        return json_decode($_SESSION['_user']);
+      if(isset($_SESSION['_user0206'])) {
+        return json_decode($_SESSION['_user0206']);
       }
     }
     return FALSE;
@@ -60,9 +62,9 @@ class UserAPI extends Base {
 
   public function userLoginFinalize($user) {
     if(USER_STORAGE == 'COOKIE') {
-      setcookie('_user', json_encode($user), time() + 3600 * 24 * 100, '/');
+      setcookie('_user0206', json_encode($user), time() + 3600 * 24 * 100, '/');
     } else {
-      $_SESSION['_user'] = json_encode($user);
+      $_SESSION['_user0206'] = json_encode($user);
     }
     return $user;
   }
@@ -71,6 +73,11 @@ class UserAPI extends Base {
     $userinfo = new \stdClass();
     $userinfo->openid = $openid;
     $user = $this->_db->insertUser($userinfo);
+    return $this->userLoginFinalize($user);
+  }
+
+  public function userRegisterOauth($info){
+    $user = $this->_db->insertUser($info);
     return $this->userLoginFinalize($user);
   }
 
