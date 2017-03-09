@@ -159,7 +159,7 @@
 
     $(".goBtn").on("click", function(){
         console.log(createInfo);
-        location.href = "result.html";
+        location.href = "/result";
     })
     
 
