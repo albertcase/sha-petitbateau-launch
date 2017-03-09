@@ -28,7 +28,6 @@ class WechatController extends Controller {
 			} 
 			if($access_token->scope == 'snsapi_userinfo') {
 				$info = $wechatUserAPI->getSnsUserInfo($access_token->openid, $access_token->access_token);
-				var_dump($info);
 				$userAPI = new \Lib\UserAPI();
 				$user = $userAPI->userLogin($access_token->openid);
 				if(!$user) {
