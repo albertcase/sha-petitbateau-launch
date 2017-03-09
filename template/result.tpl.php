@@ -35,7 +35,7 @@
 
 <?php
     $friends = json_encode($friends);
-    echo count($friends[0]);
+    echo count($friends);
 ?>
 
 <!-- 横屏代码 -->
