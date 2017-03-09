@@ -18,6 +18,7 @@
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
+    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
 <div class="loading" >
@@ -94,8 +95,7 @@
     
     pfun.loadingFnDoing(allimg, function(){
         $(".loading").css({"visibility": "hidden"});
-        // pfun.overscroll(document.querySelector("#chatArea")); 
-        // pfun.init();
+        pfun.init();
 
         // Setup FastClick.
         FastClick.attach(document.body);
