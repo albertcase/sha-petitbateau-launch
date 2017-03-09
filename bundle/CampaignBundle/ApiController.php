@@ -50,7 +50,7 @@ class ApiController extends Controller {
     	$request = $this->request;
     	$fields = array(
 			'name' => array('notnull', '120'),
-			'color' => array('cellphone', '121'),
+			'color' => array('notnull', '121'),
 		);
 		$request->validation($fields);
 		$DatabaseAPI = new \Lib\DatabaseAPI();
