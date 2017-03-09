@@ -20,7 +20,6 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
 </head>
 <body>
-<?php print $nickname;?>
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -59,7 +58,7 @@
     <div class="section" id="step1">
         <div class="stepgo stepgo-1">
             <div class="step1-t1">
-                <input type="text" name="username" class="username" placeholder="您的昵称">
+                <input type="text" name="username" class="username" value="<?php print $nickname;?>" placeholder="您的昵称">
                 <img src="/build/assets/img/step-1-text-01.png?v=338f6655b6" alt="" width="100%">
             </div>
             <div class="step1-t2">
@@ -101,18 +100,18 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js?v=26260f2a99"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg?v=73d8f4dc4c",
-        "/build/assets/img/boat-1.png?v=5d7ae45abd",
-        "/build/assets/img/boat-yellow.png?v=580498dea6",
-        "/build/assets/img/boat-red.png?v=9d7cf6662f",
-        "/build/assets/img/boat-lightblue.png?v=5270ad33e7",
-        "/build/assets/img/boat-blue.png?v=c72278c622",
-        "/build/assets/img/bridge.png?v=0099348449",
-        "/build/assets/img/slogan.png?v=5b2bbcf0c1",
-        "/build/assets/img/t-1.png?v=c069378db8",
-        "/build/assets/img/ware-1.png?v=6742377a9c",
-        "/build/assets/img/ware-2.png?v=79cb525801",
-        "/build/assets/img/ware-3.png?v=4282944fe7"
+        "/build/assets/img/bg.jpg",
+        "/build/assets/img/boat-1.png",
+        "/build/assets/img/boat-yellow.png",
+        "/build/assets/img/boat-red.png",
+        "/build/assets/img/boat-lightblue.png",
+        "/build/assets/img/boat-blue.png",
+        "/build/assets/img/bridge.png",
+        "/build/assets/img/slogan.png",
+        "/build/assets/img/t-1.png",
+        "/build/assets/img/ware-1.png",
+        "/build/assets/img/ware-2.png",
+        "/build/assets/img/ware-3.png"
     ];
 
     
