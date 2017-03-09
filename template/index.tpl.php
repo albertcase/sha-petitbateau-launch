@@ -164,9 +164,11 @@
         $(this).addClass("disabled");
         pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(data){
             console.log(data);
-            if(data.status = 1){
-                //location.href = "/result?id=" + data.msg;
-            } 
+            if(data.status == "1"){
+                location.href = "/result?id=" + data.msg;
+            }else{
+                console.log(6758);
+            }
             $(".goBtn").removeClass("disabled");
         }, function(data){
             console.log(6);
