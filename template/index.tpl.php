@@ -163,16 +163,12 @@
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
         pfun.ajaxFun("POST", "/api/submit", createInfo, "json", function(data){
-            console.log(data);
             if(data.status == "1"){
                 location.href = "/result?id=" + data.msg;
             }else{
-                console.log(6758);
+                pfun.formErrorTips("错误代码:" + data.status);
             }
             $(".goBtn").removeClass("disabled");
-        }, function(data){
-            console.log(6);
-            console.log(data);
         });
     })
     
