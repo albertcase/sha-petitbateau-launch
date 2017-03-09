@@ -93,7 +93,7 @@ class ApiController extends Controller {
 
     public function checkAction() {
     	global $user;
-    	$WechatApi = new \Lib\WechatApi();
+    	$WechatApi = new \Lib\WechatAPI();
     	$rs = $WechatApi ->isUserSubscribed($user->openid);
     	if ($rs) {
     		$data = array('status' => 1, 'msg' =>'成功');
