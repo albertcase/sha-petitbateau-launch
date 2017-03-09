@@ -16,11 +16,22 @@ class DatabaseAPI {
 	/**
 	 * Create user in database
 	 */
+	// public function insertUser($userinfo){
+	// 	$nowtime = NOWTIME;
+	// 	$sql = "INSERT INTO `user` SET `openid` = ?, `created` = ?, `updated` = ?"; 
+	// 	$res = $this->connect()->prepare($sql); 
+	// 	$res->bind_param("sss", $userinfo->openid, $nowtime, $nowtime);
+	// 	if($res->execute()) 
+	// 		return $this->findUserByOpenid($userinfo->openid);
+	// 	else 
+	// 		return FALSE;
+	// }
+
 	public function insertUser($userinfo){
 		$nowtime = NOWTIME;
-		$sql = "INSERT INTO `user` SET `openid` = ?, `created` = ?, `updated` = ?"; 
+		$sql = "INSERT INTO `user` SET `openid` = ?, `nickname` = ?, `headimgurl` = ?, `created` = ?, `updated` = ?"; 
 		$res = $this->connect()->prepare($sql); 
-		$res->bind_param("sss", $userinfo->openid, $nowtime, $nowtime);
+		$res->bind_param("sssss", $userinfo->openid, $userinfo->nickname, $userinfo->headimgurl, $nowtime, $nowtime);
 		if($res->execute()) 
 			return $this->findUserByOpenid($userinfo->openid);
 		else 
@@ -54,18 +65,38 @@ class DatabaseAPI {
 	}
 
 	/**
+	 * Create user in database  
+	 */
+	// public function findUserByOpenid($openid){
+	// 	$sql = "SELECT `uid`, `openid` FROM `user` WHERE `openid` = ?"; 
+	// 	$res = $this->connect()->prepare($sql);
+	// 	$res->bind_param("s", $openid);
+	// 	$res->execute();
+	// 	$res->bind_result($uid, $openid);
+	// 	if($res->fetch()) {
+	// 		$user = new \stdClass();
+	// 		$user->uid = $uid;
+	// 		$user->openid = $openid;
+	// 		return $user;
+	// 	}
+	// 	return NULL;
+	// }
+
+	/**
 	 * Create user in database
 	 */
 	public function findUserByOpenid($openid){
-		$sql = "SELECT `uid`, `openid` FROM `user` WHERE `openid` = ?"; 
+		$sql = "SELECT `uid`, `openid`, `nickname`, `headimgurl` FROM `user` WHERE `openid` = ?"; 
 		$res = $this->connect()->prepare($sql);
 		$res->bind_param("s", $openid);
 		$res->execute();
-		$res->bind_result($uid, $openid);
+		$res->bind_result($uid, $openid, $nickname, $headimgurl);
 		if($res->fetch()) {
 			$user = new \stdClass();
 			$user->uid = $uid;
 			$user->openid = $openid;
+			$user->nickname = $nickname;
+			$user->headimgurl = $headimgurl;
 			return $user;
 		}
 		return NULL;
@@ -128,6 +159,105 @@ class DatabaseAPI {
 			return $info;
 		}
 		return NULL;
+	}
+
+	/**
+	 * 
+	 */
+	public function insertMake($data){
+		$sql = "INSERT INTO `product` SET `uid` = ?, `nickname` = ?, `background` = ?, `color` = ?, `content` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("sssss", $data->uid, $data->nickname, $data->background, $data->color, $data->content);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function loadMakeById($id){
+		$sql = "SELECT `id`, `uid`, `nickname`, `background`, `color`, `content` FROM `product` WHERE `id` = ?"; 
+		$res = $this->connect()->prepare($sql);
+		$res->bind_param("s", $id);
+		$res->execute();
+		$res->bind_result($id, $uid, $nickname, $background, $color, $content);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->id = $id;
+			$info->uid = $uid;
+			$info->nickname = $nickname;
+			$info->background = $background;
+			$info->color = $color;
+			$info->$content = $content;
+			return $info;
+		}
+		return NULL;
+	}
+
+	public function loadMakeByUid($uid){
+		$sql = "SELECT `id`, `uid`, `nickname`, `background`, `color`, `content` FROM `product` WHERE `uid` = ?"; 
+		$res = $this->connect()->prepare($sql);
+		$res->bind_param("s", $uid);
+		$res->execute();
+		$res->bind_result($id, $uid, $nickname, $background, $color, $content);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->id = $id;
+			$info->uid = $uid;
+			$info->nickname = $nickname;
+			$info->background = $background;
+			$info->color = $color;
+			$info->content = $content;
+			return $info;
+		}
+		return NULL;
+	}
+
+	public function loadListByUid($uid) {
+		$sql = "SELECT * FROM `product` WHERE uid in (select fuid from band where uid = '".intval($uid)."')"; 
+		$res = $this->db->query($sql);
+		$data = array();
+		while($rows = $res->fetch_array(MYSQLI_ASSOC))
+		{
+			$data[] = $rows;
+		}	
+		return $data;
+	}
+
+	/**
+	 * 
+	 */
+	public function bandShare($uid, $fuid){
+		$sql = "INSERT INTO `band` SET `uid` = ?, `fuid` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ss", $uid, $fuid);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function insertSubmit($data){
+		$sql = "INSERT INTO `submit` SET `uid` = ?, `sex` = ?, `name` = ?, `mobile` = ?, `email` = ?, `store` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ssssss", $data->uid, $data->sex, $data->name, $data->mobile, $data->email, $data->store);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function clearMake(){
+		$sql = "TRUNCATE table product"; 
+		$res = $this->connect()->prepare($sql); 
+		if($res->execute()) {
+			$sql2 = "TRUNCATE table band"; 
+			$res2 = $this->connect()->prepare($sql2); 
+			$res2->execute();
+			return TRUE;
+		}
+			
+		else 
+			return FALSE;
 	}
 
 }
