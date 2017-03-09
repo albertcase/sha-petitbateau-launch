@@ -166,7 +166,7 @@
             if(data.status == "1"){
                 location.href = "/result?id=" + data.msg;
             }else{
-                pfun.formErrorTips("错误代码:" + data.status);
+                pfun.formErrorTips("提交信息有误!");
             }
             $(".goBtn").removeClass("disabled");
         });

@@ -130,13 +130,18 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg?v=73d8f4dc4c",
-        "/build/assets/img/ware-1.png?v=6742377a9c",
-        "/build/assets/img/ware-2.png?v=79cb525801",
-        "/build/assets/img/ware-3.png?v=4282944fe7"
+        "/build/assets/img/bg.jpg",
+        "/build/assets/img/ware-1.png",
+        "/build/assets/img/ware-2.png",
+        "/build/assets/img/ware-3.png"
     ];
 
-    
+    shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
+    shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
+    shareArr["_desc_friend"] = "Petit Bateau丨快来帮我的小船加速吧！";
+    shareArr["_link"] = "Petit Bateau丨快来帮我的小船加速吧！";
+
+
     pfun.loadingFnDoing(allimg, function(){
         $(".loading").css({"visibility": "hidden"});
 
