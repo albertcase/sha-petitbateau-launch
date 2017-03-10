@@ -168,10 +168,14 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg",
-        "/build/assets/img/ware-1.png",
-        "/build/assets/img/ware-2.png",
-        "/build/assets/img/ware-3.png"
+        "/build/assets/img/r_ware_1.png",
+        "/build/assets/img/r_ware_2.png",
+        "/build/assets/img/r_ware_3.png",
+        "/build/assets/img/r_ware_4.png",
+        "/build/assets/img/r_ware_5.png",
+        "/build/assets/img/r_ware_6.png",
+        "/build/assets/img/r_ware_7.png",
+        "/build/assets/img/r_ware_8.png",
     ],_createId = pfun.getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";

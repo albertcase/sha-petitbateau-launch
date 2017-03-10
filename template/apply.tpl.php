@@ -89,18 +89,8 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg",
-        "/build/assets/img/boat-1.png",
-        "/build/assets/img/boat-yellow.png",
-        "/build/assets/img/boat-red.png",
-        "/build/assets/img/boat-lightblue.png",
-        "/build/assets/img/boat-blue.png",
-        "/build/assets/img/bridge.png",
-        "/build/assets/img/slogan.png",
-        "/build/assets/img/t-1.png",
-        "/build/assets/img/ware-1.png",
-        "/build/assets/img/ware-2.png",
-        "/build/assets/img/ware-3.png"
+        "/build/assets/img/store.png",
+        "/build/assets/img/tmall.png",
     ];
 
     
