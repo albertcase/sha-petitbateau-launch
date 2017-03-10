@@ -280,6 +280,18 @@ class DatabaseAPI {
 			return FALSE;
 	}
 
+	
+	public function insertCode($number){
+		$sql = "INSERT INTO `card` SET `number` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("s", $number);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+
 	public function destroyCard($id){
 		$sql = "UPDATE `card` SET `status` = 1 where id = ?"; 
 		$res = $this->connect()->prepare($sql); 
