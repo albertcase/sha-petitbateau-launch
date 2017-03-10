@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=d3e2e97747">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=2bd0087ff7">
 </head>
 <body>
 <div class="loading" >
@@ -91,8 +91,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep4">
-            <div class="r_boat animoved-in">
+        <div class="ware el boatele boatstep1">
+            <div class="r_boat animove1-in">
                 <p>友谊的小船</p>
                 <img src="/build/assets/img/r_boat_yellow.png?v=57a4140c68" width="100%" alt="">
             </div>
@@ -147,12 +147,15 @@
     })
     
 
-$(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
-    if($(this).hasClass("animovea-out")){
-        console.log(9);
-    }
-});
+    $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
+        if($(this).hasClass("animovea-out")){
+            console.log(9);
+        }
+    });
 
+    $(".qrcode").on("click", function(){
+            $(this).addClass("hidden");
+    })
 
 
 </script>

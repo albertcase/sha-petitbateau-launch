@@ -1199,7 +1199,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     -moz-transform: translate3d(-1%, 0, 0) rotateZ(-3deg);
     transform: translate3d(-1%, 0, 0) rotateZ(-3deg); } }
 
-.animovea-in {
+.animove0-in {
   animation-play-state: running;
   -webkit-animation: moveain 3.60s 0.1s 1 linear;
   -moz-animation: moveain 3.60s 0.1s 1 linear;
@@ -1207,7 +1207,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovea-out {
+.animove0-out {
   animation-play-state: running;
   -webkit-animation: moveaout 3.60s 0.1s 1 linear;
   -moz-animation: moveaout 3.60s 0.1s 1 linear;
@@ -1215,7 +1215,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoveb-in {
+.animove1-in {
   animation-play-state: running;
   -webkit-animation: movebin 3.60s 0.1s 1 linear;
   -moz-animation: movebin 3.60s 0.1s 1 linear;
@@ -1223,7 +1223,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoveb-out {
+.animove1-out {
   animation-play-state: running;
   -webkit-animation: movebout 3.60s 0.1s 1 linear;
   -moz-animation: movebout 3.60s 0.1s 1 linear;
@@ -1231,7 +1231,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovec-in {
+.animove2-in {
   animation-play-state: running;
   -webkit-animation: movecin 3.60s 0.1s 1 linear;
   -moz-animation: movecin 3.60s 0.1s 1 linear;
@@ -1239,7 +1239,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovec-out {
+.animove2-out {
   animation-play-state: running;
   -webkit-animation: movecout 3.60s 0.1s 1 linear;
   -moz-animation: movecout 3.60s 0.1s 1 linear;
@@ -1247,7 +1247,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoved-in {
+.animove3-in {
   animation-play-state: running;
   -webkit-animation: movedin 3.60s 0.1s 1 linear;
   -moz-animation: movedin 3.60s 0.1s 1 linear;
@@ -1255,7 +1255,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoved-out {
+.animove3-out {
   animation-play-state: running;
   -webkit-animation: movedout 3.60s 0.1s 1 linear;
   -moz-animation: movedout 3.60s 0.1s 1 linear;

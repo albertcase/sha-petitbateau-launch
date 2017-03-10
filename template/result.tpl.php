@@ -38,7 +38,7 @@
 <div id="orientLayer" class="mod-orient-layer">
     <div class="mod-orient-layer__content">
         <i class="icon mod-orient-layer__icon-orient"></i>
-        <div class="mod-orient-layer__desc">为了更好的体验，请解锁横屏浏览<br><em>建议全程在wifi环境下观看</em></div>
+        <div class="mod-orient-layer__desc">为了更好的体验，请解锁竖屏浏览<br><em>建议全程在wifi环境下观看</em></div>
     </div>
 </div>
 
@@ -102,8 +102,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep4">
-            <div class="r_boat animoved-in">
+        <div class="ware el boatele boatstep<?php print count($friends);?>">
+            <div class="r_boat animove<?php print count($friends);?>-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
