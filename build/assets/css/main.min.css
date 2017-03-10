@@ -513,9 +513,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-align: center;
   display: inline-block; }
 
-.btn.disabled {
-  position: relative; }
-
 .btn.disabled:before {
   width: 100%;
   height: 100%;
