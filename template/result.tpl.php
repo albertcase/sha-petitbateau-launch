@@ -87,7 +87,7 @@
                         if($boat == 3){
                             echo '<a href="/" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
                         }else{
-                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="/" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
                         }   
                     }
                 ?>  
