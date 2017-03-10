@@ -20,7 +20,10 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
 </head>
-<body data-ismy="<?php print $ismy;?>" data-count="<?php print count($friends);?>" data-friends="<?php print json_encode($friends);?>">
+<?php
+    $counts = (count($friends) >= 3) ? 3 : count($friends);
+?> 
+<body data-ismy="<?php print $ismy;?>" data-count="<?php print $counts;?>" data-friends="<?php print json_encode($friends);?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -63,7 +66,7 @@
                 }
             ?>
             <div class="lave">
-                <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print $counts;?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
@@ -98,7 +101,7 @@
 
         <?php 
             if($ismy){ 
-                if(count($friends) == 3){ 
+                if($counts == 3){ 
                     echo '<div class="ware el money-2"></div>'; 
                 }else{
                     echo '<div class="ware el money"></div>';
@@ -115,8 +118,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep<?php print count($friends);?>">
-            <div class="r_boat animove<?php print count($friends);?>-in">
+        <div class="ware el boatele boatstep<?php print $counts;?>">
+            <div class="r_boat animove<?php print $counts;?>-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
@@ -126,12 +129,12 @@
 
 </div>
 
-<?php if (count($friends)!=0 && $ismy) {
+<?php if ($counts!=0 && $ismy) {
 ?>
 <marquee direction="left" behavior="scroll">
     <p>
     <?php 
-    for ($i = 0; $i < count($friends); $i ++) {
+    for ($i = 0; $i < $counts; $i ++) {
         echo '<span>'.$friends[$i]->nickname.'刚刚给你加速</span>';
     }
     ?>
