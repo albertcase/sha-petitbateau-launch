@@ -17,3 +17,4 @@ $routers['/login'] = array('CampaignBundle\Page', 'login');
 $routers['/api/submit'] = array('CampaignBundle\Api', 'make');
 $routers['/api/like'] = array('CampaignBundle\Api', 'like');
 $routers['/api/check'] = array('CampaignBundle\Api', 'check');
+$routers['/api/card'] = array('CampaignBundle\Api', 'card');

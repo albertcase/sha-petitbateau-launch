@@ -12,7 +12,15 @@ class PageController extends Controller {
 	}
 
 	public function applyAction() {
-		$this->render('apply');
+		global $user;
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$card = $DatabaseAPI->getCard($user->uid);
+		if (!$card) {
+			$array = array('type'=>'', 'number'=>'');
+		} else {
+			$array = array('type'=>$card->type, 'number'=>$card->number);
+		}
+		$this->render('apply', $array);
 	}
 
 	public function loginAction() {
@@ -47,7 +55,15 @@ class PageController extends Controller {
 			$ismy = 0;
 		}
 		$friends = $DatabaseAPI->getFriendsById($id);
-		$this->render('result', array('ismy' => $ismy, 'name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends));
+
+    	$WechatApi = new \Lib\WechatAPI();
+    	$rs = $WechatApi ->isUserSubscribed($user->openid);
+    	if ($rs) {
+    		$subscribe = 1;
+    	} else {
+    		$subscribe = 0;
+    	}
+		$this->render('result', array('subscribe' => $subscribe, 'ismy' => $ismy, 'name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends));
 	}
 
 	public function testAction() {
