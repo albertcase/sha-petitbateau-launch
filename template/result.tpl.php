@@ -69,7 +69,11 @@
             <div class="footerArea">
                 <?php
                     if($ismy){
-                        echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
+                        if($boat == 3){
+                            echo '<a href="javascript:void(0);" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
+                        }else{
+                            echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
+                        }
                     }else{
                         if($boat == 3){
                             echo '<a href="/" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
@@ -138,7 +142,7 @@
 
         foreach ($friends as $key => $value) {
             if ($key < 3)
-            echo '<span>'.$value['nickname'].'刚刚给你加速</span>';
+            echo '<span>'.$value['nickname'].' 刚刚给你加速</span>';
         }      
     ?>
     </p>
