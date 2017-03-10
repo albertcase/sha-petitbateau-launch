@@ -646,7 +646,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .btn {
   width: 50%;
   height: 30px;
-  background: rgba(22, 34, 67, 0.6);
   z-index: 2; }
 
 .btn.startBtn {
@@ -1062,7 +1061,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .rulelink {
   width: 40%;
   height: 9%;
-  background: rgba(22, 67, 78, 0.6);
   position: absolute;
   left: 50%;
   bottom: -3%;
