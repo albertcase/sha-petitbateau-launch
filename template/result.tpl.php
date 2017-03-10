@@ -20,10 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
 </head>
-<?php
-    $counts = (count($friends) >= 3) ? 3 : count($friends);
-?> 
-<body data-ismy="<?php print $ismy;?>" data-countf="<?php print count($friends);?>" data-count="<?php print $counts;?>" data-friends="<?php print json_encode($friends);?>">
+<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -66,7 +63,7 @@
                 }
             ?>
             <div class="lave">
-                <img src="/build/assets/img/lave-<?php print $counts;?>.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print $boat;?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
@@ -74,7 +71,7 @@
                     if($ismy){
                         echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
                     }else{
-                        if($counts == 3){
+                        if($boat == 3){
                             echo '<a href="/" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
                         }else{
                             echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
@@ -105,7 +102,7 @@
 
         <?php 
             if($ismy){ 
-                if($counts == 3){ 
+                if($boat == 3){ 
                     echo '<div class="ware el money-2"></div>'; 
                 }else{
                     echo '<div class="ware el money"></div>';
@@ -122,8 +119,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep<?php print $counts;?>">
-            <div class="r_boat animove<?php print $counts;?>-in">
+        <div class="ware el boatele boatstep<?php print $boat;?>">
+            <div class="r_boat animove<?php print $boat;?>-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
@@ -133,12 +130,12 @@
 
 </div>
 
-<?php if ($counts!=0 && $ismy) {
+<?php if ($boat!=0 && $ismy) {
 ?>
 <marquee direction="left" behavior="scroll">
     <p>
     <?php 
-        foreach ($variable as $key => $value) {
+        foreach ($friends as $key => $value) {
             echo '<span>'.$value->nickname.'刚刚给你加速</span>';
         }
             
