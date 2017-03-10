@@ -195,6 +195,8 @@
                     $(".r_boat").addClass("animoved-out");
                 }
 
+            }else{
+                pfun.formErrorTips("加速失败!");
             }
             $(".tadd").removeClass("disabled");
         });
@@ -205,7 +207,7 @@
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
         if($(this).hasClass("animovea-out")){
-            console.log(9);
+            location.href.reload();
         }
     });
 
