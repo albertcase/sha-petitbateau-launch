@@ -55,7 +55,13 @@
 
 <div id="dreambox">
     <div class="section" id="result">
-        <div class="stepgo <?php if($ismy){echo "stepgo-3"}?> ">
+            <?php 
+                if($ismy){ 
+                    echo '<div class="stepgo stepgo-3">'; 
+                }else{
+                    echo '<div class="stepgo">';
+                }
+            ?>
             <div class="lave">
                 <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
             </div>
