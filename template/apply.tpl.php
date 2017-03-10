@@ -51,7 +51,7 @@
                         <div class="ticketcon">
                             <a href="javascript:void(0)" class="rulelink"></a>
                             <div class="tickettext">
-                                <img src="/build/assets/img/store_text.png" alt="" width="100%">
+                                <img src="/build/assets/img/storetext-'.$type.'.png" alt="" width="100%">
                             </div>
                             <div class="ticketcode"> '.$number.'</div>
                             <div class="tickettime"> '.$start.' - '.$end.'</div>
