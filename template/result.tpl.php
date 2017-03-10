@@ -136,7 +136,7 @@
     <p>
     <?php 
         foreach ($friends as $key => $value) {
-            echo '<span>'.$value->nickname.'刚刚给你加速</span>';
+            echo '<span>'.$value['nickname'].'刚刚给你加速</span>';
         }
             
     ?>
