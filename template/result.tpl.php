@@ -23,7 +23,7 @@
 <?php
     $counts = (count($friends) >= 3) ? 3 : count($friends);
 ?> 
-<body data-ismy="<?php print $ismy;?>" data-count="<?php print $counts;?>" data-friends="<?php print json_encode($friends);?>">
+<body data-ismy="<?php print $ismy;?>" data-countf="<?php print count($friends);?>" data-count="<?php print $counts;?>" data-friends="<?php print json_encode($friends);?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
