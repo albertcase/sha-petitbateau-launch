@@ -18,6 +18,10 @@ class PageController extends Controller {
 		if (!$card) {
 			$array = array('type'=>'', 'number'=>'');
 		} else {
+			$start = date("Y.m.d", strtotime($dt));
+			$end = date("Y.m.d +20day", strtotime($dt));
+			echo $start;
+			echo $end;exit;
 			$array = array('type'=>$card->type, 'number'=>$card->number);
 		}
 		$this->render('apply', $array);

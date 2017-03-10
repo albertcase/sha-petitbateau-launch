@@ -231,15 +231,16 @@ class DatabaseAPI {
 	}
 	
 	public function getCard($uid) {
-		$sql = "SELECT `type`, `number` FROM `apply` WHERE `uid` = ?"; 
+		$sql = "SELECT `type`, `number`, date(`createtime`) as dt FROM `apply` WHERE `uid` = ?"; 
 		$res = $this->connect()->prepare($sql);
 		$res->bind_param("s", $uid);
 		$res->execute();
-		$res->bind_result($type, $number);
+		$res->bind_result($type, $number, $dt);
 		if($res->fetch()) {
 			$info = new \stdClass();
 			$info->type = $type;
 			$info->number = $number;
+			$info->dt = $dt;
 			return $info;
 		}
 		return NULL;
