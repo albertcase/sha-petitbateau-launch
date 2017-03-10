@@ -7,7 +7,11 @@ class PageController extends Controller {
 
 	public function indexAction() {
 		global $user;
-
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		$boat = $DatabaseAPI->loadMakeByUid($user->uid);
+		if ($boat) {
+			$this->redirect("/result?id=".$boat->id);
+		}
 		$this->render('index', array('nickname'=> $user->nickname));
 	}
 
@@ -19,7 +23,7 @@ class PageController extends Controller {
 			$array = array('type'=>'', 'number'=>'');
 		} else {
 			$start = date("Y.m.d", strtotime($card->dt));
-			$end = date("Y.m.d", strtotime($card->dt." +13day"));
+			$end = date("Y.m.d", strtotime($card->dt." +14day"));
 			$array = array('type'=>$card->type, 'number'=>$card->number, 'start'=> $start, 'end' => $end);
 		}
 		$this->render('apply', $array);

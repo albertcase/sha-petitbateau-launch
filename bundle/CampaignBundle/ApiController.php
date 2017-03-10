@@ -87,7 +87,7 @@ class ApiController extends Controller {
 			$data = array('status' => 1, 'msg' =>'成功');
 			$this->dataPrint($data);
 		} else {
-			$this->statusPrint('0', 'failed');
+			$this->statusPrint('2', 'failed');
 		}
     }
 
