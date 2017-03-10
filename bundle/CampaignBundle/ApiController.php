@@ -91,4 +91,17 @@ class ApiController extends Controller {
 		}
     }
 
+    public function checkAction() {
+    	global $user;
+    	$WechatApi = new \Lib\WechatAPI();
+    	$rs = $WechatApi ->isUserSubscribed($user->openid);
+    	if ($rs) {
+    		$data = array('status' => 1, 'msg' =>'成功');
+			$this->dataPrint($data);
+    	} else {
+    		$data = array('status' => 0, 'msg' =>'未关注');
+			$this->dataPrint($data);
+    	}
+    }
+
 }

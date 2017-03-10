@@ -34,6 +34,7 @@
 </div>
 
 <?php
+    echo $count = count($friends);
     $friends = json_encode($friends);
 ?>
 
