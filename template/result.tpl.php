@@ -206,7 +206,7 @@
     
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
-        if($(this).hasClass("animovea-out")){
+        if($(this).hasClass("animove1-out") || $(this).hasClass("animove2-out") || $(this).hasClass("animove3-out") || $(this).hasClass("animove4-out")){
             location.href.reload();
         }
     });
