@@ -21,6 +21,8 @@
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
+<?php print $type;?>
+<?php print $number;?>
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
