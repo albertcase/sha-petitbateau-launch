@@ -269,6 +269,26 @@ class DatabaseAPI {
 			return FALSE;
 	}
 
+	public function insertCard($uid, $type, $cid, $number){
+		$sql = "INSERT INTO `apply` SET `uid` = ?, `type` = ?, `cid` = ?, `number` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ssss", $uid, $type, $cid, $number);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function destroyCard($id){
+		$sql = "UPDATE `card` SET `status` = 1 where id = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("s", $id);
+		if($res->execute()) 
+			return TRUE;
+		else 
+			return FALSE;
+	}
+
 	public function clearMake(){
 		$sql = "TRUNCATE table product"; 
 		$res = $this->connect()->prepare($sql); 

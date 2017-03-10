@@ -123,6 +123,10 @@ class ApiController extends Controller {
 			$data = array('status' => 2, 'msg' =>'卡券发放完毕');
 			$this->dataPrint($data);
 		}
+		$DatabaseAPI->insertCard($user->uid, $type, $sendcard->id, $sendcard->number);
+		$DatabaseAPI->destroyCard($sendcard->id);
+		$data = array('status' => 1, 'msg' =>$sendcard->number);
+		$this->dataPrint($data);
 
     }
 
