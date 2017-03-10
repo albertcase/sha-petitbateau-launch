@@ -230,9 +230,9 @@
         }
     });
 
-    $(".qrcode").on("click", function(){
-            $(this).addClass("hidden");
-    })
+    // $(".qrcode").on("click", function(){
+    //         $(this).addClass("hidden");
+    // })
 
 
     $(".applyhb,.applyBtn").on("click", function(){
