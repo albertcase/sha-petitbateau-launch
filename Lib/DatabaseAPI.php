@@ -209,6 +209,16 @@ class DatabaseAPI {
 		return NULL;
 	}
 
+	public function likeBoat($uid, $id) {
+		$sql = "INSERT INTO `ballot` SET `uid` = ?, `bid` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ss", $uid, $id);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
 	public function getFriendsById($bid) {
 		$sql = "SELECT uid,nickname FROM `user` WHERE uid in (select uid from ballot where bid = '".intval($bid)."')"; 
 		$res = $this->db->query($sql);
@@ -221,14 +231,29 @@ class DatabaseAPI {
 	}
 	
 	public function getCard($uid) {
-		$sql = "SELECT `type`, `number` FROM `apply` WHERE `uid` = ?"; 
+		$sql = "SELECT `type`, `number`, date(`createtime`) as dt FROM `apply` WHERE `uid` = ?"; 
 		$res = $this->connect()->prepare($sql);
 		$res->bind_param("s", $uid);
 		$res->execute();
-		$res->bind_result($type, $number);
+		$res->bind_result($type, $number, $dt);
 		if($res->fetch()) {
 			$info = new \stdClass();
 			$info->type = $type;
+			$info->number = $number;
+			$info->dt = $dt;
+			return $info;
+		}
+		return NULL;
+	}
+
+	public function getSendCard() {
+		$sql = "SELECT `id`, `number` FROM `card` WHERE `status` = 0"; 
+		$res = $this->connect()->prepare($sql);
+		$res->execute();
+		$res->bind_result($id, $number);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->id = $id;
 			$info->number = $number;
 			return $info;
 		}
@@ -241,6 +266,26 @@ class DatabaseAPI {
 		$res->bind_param("ssssss", $data->uid, $data->sex, $data->name, $data->mobile, $data->email, $data->store);
 		if($res->execute()) 
 			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function insertCard($uid, $type, $cid, $number){
+		$sql = "INSERT INTO `apply` SET `uid` = ?, `type` = ?, `cid` = ?, `number` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ssss", $uid, $type, $cid, $number);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
+	public function destroyCard($id){
+		$sql = "UPDATE `card` SET `status` = 1 where id = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("s", $id);
+		if($res->execute()) 
+			return TRUE;
 		else 
 			return FALSE;
 	}

@@ -113,7 +113,21 @@ class ApiController extends Controller {
 		);
 		$request->validation($fields);
 		$type = $request->request->get('type');
-		
+		$card = $DatabaseAPI->getCard($user->uid);
+		if ($card) {
+			$data = array('status' => 2, 'msg' =>'已经领取过了');
+			$this->dataPrint($data);
+		}
+		$sendcard = $DatabaseAPI->getSendCard();
+		if (!$sendcard) {
+			$data = array('status' => 2, 'msg' =>'卡券发放完毕');
+			$this->dataPrint($data);
+		}
+		$DatabaseAPI->insertCard($user->uid, $type, $sendcard->id, $sendcard->number);
+		$DatabaseAPI->destroyCard($sendcard->id);
+		$data = array('status' => 1, 'msg' =>$sendcard->number);
+		$this->dataPrint($data);
+
     }
 
 }
