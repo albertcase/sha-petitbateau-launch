@@ -59,7 +59,7 @@
     <div class="section" id="result">
         <div class="stepgo stepgo-3">
             <div class="lave">
-                <img src="/build/assets/img/lave-<?php print $count;?>.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
