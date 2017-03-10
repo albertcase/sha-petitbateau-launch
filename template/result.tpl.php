@@ -36,7 +36,6 @@
 <?php
     echo $count = count($friends);
     $friends = json_encode($friends);
-    
 ?>
 
 <!-- 横屏代码 -->
@@ -80,60 +79,37 @@
     <div class="warelist">
         <div class="ware el lighthouse"></div>
         <div class="ware el r_ware_8"></div>
-        <div class="ware boat boat-blue"></div>
         <div class="ware el r_ware_7"></div>
 
+        <div class="ware el r_ware_6"></div>
+
+        <div class="ware el r_ware_5"></div>
+
+        <div class="ware el r_ware_4"></div>
+
+        <div class="ware el r_ware_3"></div>
+
+        <div class="ware el r_ware_2"></div>
+
+        <div class="ware el r_ware_1"></div>
+
+        
         <div class="ware el money"></div>
 
-        <!-- 3/3 -->
-        <div class="ware el boatstep4">
-            <div class="r_boat">
+        <div class="ware el ancla"></div>
+
+        <div class="ware el ball-1"></div>
+
+        <div class="ware el ball-2"></div>
+
+        <!-- 0/3 -->
+        <div class="ware el boatele boatstep4">
+            <div class="r_boat animoved-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
         </div>
 
-        <div class="ware el r_ware_6"></div>
-
-        <div class="ware el ball-2"></div>
-
-        <div class="ware el r_ware_5"></div>
-
-        <div class="ware el ball-1"></div>
-
-        <!-- 2/3 -->
-        <!-- <div class="ware el boatstep3">
-            <div class="r_boat">
-                <span><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>
-                <p>友谊的小船</p>
-                <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
-            </div>
-        </div> -->
-
-        <div class="ware el r_ware_4"></div>
-
-        <!-- 1/3 -->
-        <!-- <div class="ware el boatstep2">
-            <div class="r_boat">
-                <span><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>
-                <p>友谊的小船</p>
-                <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
-            </div>
-        </div> -->
-
-        <div class="ware el r_ware_3"></div>
-    
-        <div class="ware el ancla"></div>
-
-        <div class="ware el r_ware_2"></div>
-        <!-- 0/3 -->
-        <!-- <div class="ware el boatstep1">
-            <div class="r_boat">
-                <p>友谊的小船</p>
-                <img src="/build/assets/img/r_boat_yellw.png" width="100%" alt="">
-            </div>
-        </div> -->
-        <div class="ware el r_ware_1"></div>
     </div>
 
 </div>
@@ -172,6 +148,26 @@
     $(".shareTips").on("click", function(){
         $(this).addClass("hidden");
     })
+
+
+    $(".tadd").on("click", function(){
+        if($(".boatele").hasClass("boatstep1")){
+            $(".r_boat").addClass("animovea-out");
+        }else if($(".boatele").hasClass("boatstep2")){
+            $(".r_boat").addClass("animoveb-out");
+        }else if($(".boatele").hasClass("boatstep3")){
+            $(".r_boat").addClass("animovec-out");
+        }else{
+            $(".r_boat").addClass("animoved-out");
+        }
+    })
+    
+
+    $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
+        if($(this).hasClass("animovea-out")){
+            console.log(9);
+        }
+    });
     
 
 
