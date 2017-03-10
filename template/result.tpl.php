@@ -236,6 +236,7 @@
     });
 
     $(".applyhb,.applyBtn").on("click", function(){
+        alert($(".qrcode"));
         if($(".qrcode")){
             $(".qrcode").removeClass("hidden");
         }else{
