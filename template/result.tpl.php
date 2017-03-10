@@ -186,13 +186,13 @@
                 pfun.formErrorTips("加速成功!");
 
                 if($(".boatele").hasClass("boatstep0")){
-                    $(".r_boat").addClass("animovea-out");
+                    $(".r_boat").addClass("animove1-out");
                 }else if($(".boatele").hasClass("boatstep1")){
-                    $(".r_boat").addClass("animoveb-out");
+                    $(".r_boat").addClass("animove2-out");
                 }else if($(".boatele").hasClass("boatstep2")){
-                    $(".r_boat").addClass("animovec-out");
+                    $(".r_boat").addClass("animove3-out");
                 }else{
-                    $(".r_boat").addClass("animoved-out");
+                    $(".r_boat").addClass("animove4-out");
                 }
 
             }else{
