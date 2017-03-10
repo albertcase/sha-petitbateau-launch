@@ -138,9 +138,10 @@
 <marquee direction="left" behavior="scroll">
     <p>
     <?php 
-    for ($i = 0; $i < $counts; $i ++) {
-        echo '<span>'.$friends[$i]->nickname.'刚刚给你加速</span>';
-    }
+        foreach ($variable as $key => $value) {
+            echo '<span>'.$value->nickname.'刚刚给你加速</span>';
+        }
+            
     ?>
     </p>
 </marquee>
