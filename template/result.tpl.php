@@ -18,7 +18,7 @@
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
-    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
+    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
 <div class="loading" >
