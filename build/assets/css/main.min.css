@@ -1071,6 +1071,29 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background: rgba(255, 255, 255, 0.7) url("../img/store.png") center no-repeat;
   background-size: 100% auto; }
 
+marquee {
+  width: 100%;
+  padding: 6px 0;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 1.4rem;
+  color: #fff;
+  z-index: 15; }
+
+marquee p {
+  width: 600px; }
+
+marquee span {
+  width: 200px;
+  text-align: center;
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
 /*****************************
 * 常用
 *****************************/

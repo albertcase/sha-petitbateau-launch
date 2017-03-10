@@ -126,6 +126,21 @@
 
 </div>
 
+<?php if (count($friends)!=0 && $ismy) {
+?>
+<marquee direction="left" behavior="scroll">
+    <p>
+    <?php 
+    for ($i = 0; $i < count($friends); $i ++) {
+        echo '<span>'.$friends[$i]->nickname.'刚刚给你加速</span>';
+    }
+    ?>
+    </p>
+</marquee>
+<?php } ?>
+
+
+
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
