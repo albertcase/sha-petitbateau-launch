@@ -38,7 +38,7 @@
 <div id="orientLayer" class="mod-orient-layer">
     <div class="mod-orient-layer__content">
         <i class="icon mod-orient-layer__icon-orient"></i>
-        <div class="mod-orient-layer__desc">为了更好的体验，请解锁横屏浏览<br><em>建议全程在wifi环境下观看</em></div>
+        <div class="mod-orient-layer__desc">为了更好的体验，请解锁竖屏浏览<br><em>建议全程在wifi环境下观看</em></div>
     </div>
 </div>
 
@@ -53,13 +53,17 @@
 ?> 
 
 
-
-
 <div id="dreambox">
     <div class="section" id="result">
-        <div class="stepgo stepgo-3">
+            <?php 
+                if($ismy){ 
+                    echo '<div class="stepgo stepgo-3">'; 
+                }else{
+                    echo '<div class="stepgo">';
+                }
+            ?>
             <div class="lave">
-                <img src="/build/assets/img/lave-<?php print $count;?>.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
@@ -92,9 +96,18 @@
 
         <div class="ware el r_ware_1"></div>
 
+        <?php 
+            if($ismy){ 
+                if(count($friends) == 3){ 
+                    echo '<div class="ware el money-2"></div>'; 
+                }else{
+                    echo '<div class="ware el money"></div>';
+                }
+            }else{
+                echo '<div class="ware el money"></div>';
+            }
+        ?>
         
-        <div class="ware el money"></div>
-
         <div class="ware el ancla"></div>
 
         <div class="ware el ball-1"></div>
@@ -102,8 +115,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep4">
-            <div class="r_boat animoved-in">
+        <div class="ware el boatele boatstep<?php print count($friends);?>">
+            <div class="r_boat animove<?php print count($friends);?>-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
@@ -120,7 +133,7 @@
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
         "/build/assets/img/ware-3.png"
-    ];
+    ],_createId = pfun.getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
@@ -150,15 +163,28 @@
 
 
     $(".tadd").on("click", function(){
-        if($(".boatele").hasClass("boatstep1")){
-            $(".r_boat").addClass("animovea-out");
-        }else if($(".boatele").hasClass("boatstep2")){
-            $(".r_boat").addClass("animoveb-out");
-        }else if($(".boatele").hasClass("boatstep3")){
-            $(".r_boat").addClass("animovec-out");
-        }else{
-            $(".r_boat").addClass("animoved-out");
-        }
+        if($(this).hasClass("disabled")) return false;
+        $(this).addClass("disabled");
+
+        pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
+            if(data.status == "1"){
+                pfun.formErrorTips("加速成功!");
+
+                if($(".boatele").hasClass("boatstep0")){
+                    $(".r_boat").addClass("animovea-out");
+                }else if($(".boatele").hasClass("boatstep1")){
+                    $(".r_boat").addClass("animoveb-out");
+                }else if($(".boatele").hasClass("boatstep2")){
+                    $(".r_boat").addClass("animovec-out");
+                }else{
+                    $(".r_boat").addClass("animoved-out");
+                }
+
+            }
+            $(".tadd").removeClass("disabled");
+        });
+
+
     })
     
 

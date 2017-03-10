@@ -513,9 +513,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-align: center;
   display: inline-block; }
 
-.btn.disabled {
-  position: relative; }
-
 .btn.disabled:before {
   width: 100%;
   height: 100%;
@@ -854,6 +851,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   animation: wave 6.0s 0.1s infinite linear;
   z-index: 3; }
 
+.money-2 {
+  background: url("../img/money-2.png") center bottom no-repeat;
+  background-size: auto 100%;
+  -webkit-animation: wave 6.0s 0.1s infinite linear;
+  -moz-animation: wave 6.0s 0.1s infinite linear;
+  animation: wave 6.0s 0.1s infinite linear;
+  z-index: 3; }
+
 .shareTips {
   width: 100%;
   height: 100%;
@@ -900,7 +905,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: absolute;
   left: 50%;
   margin: 0 0 0 -6.5%;
-  top: 61%;
+  top: 62%;
   z-index: 2; }
 
 .r_boat p {
@@ -952,7 +957,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep2 .r_boat {
-  top: 46%;
+  top: 47%;
   margin: 0 0 0 -18%;
   transform: translate(-100%, 0%);
   -ms-transform: translate(-100%, 0%);
@@ -965,7 +970,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep3 .r_boat {
-  top: 37%;
+  top: 38%;
   margin: 0 0 0 -20%;
   transform: translate(100%, 0%);
   -ms-transform: translate(100%, 0%);
@@ -978,7 +983,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep4 .r_boat {
-  top: 21%;
+  top: 22%;
   margin: 0 0 0 -20%;
   transform: translate(-60%, 0%);
   -ms-transform: translate(-60%, 0%);
@@ -1058,11 +1063,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   top: 0;
   z-index: 16; }
 
-.tmallrule {
+.rule-1 {
   background: rgba(255, 255, 255, 0.7) url("../img/tmall.png") center no-repeat;
   background-size: 100% auto; }
 
-.storerule {
+.rule-2 {
   background: rgba(255, 255, 255, 0.7) url("../img/store.png") center no-repeat;
   background-size: 100% auto; }
 
@@ -1199,7 +1204,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     -moz-transform: translate3d(-1%, 0, 0) rotateZ(-3deg);
     transform: translate3d(-1%, 0, 0) rotateZ(-3deg); } }
 
-.animovea-in {
+.animove0-in {
   animation-play-state: running;
   -webkit-animation: moveain 3.60s 0.1s 1 linear;
   -moz-animation: moveain 3.60s 0.1s 1 linear;
@@ -1207,7 +1212,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovea-out {
+.animove0-out {
   animation-play-state: running;
   -webkit-animation: moveaout 3.60s 0.1s 1 linear;
   -moz-animation: moveaout 3.60s 0.1s 1 linear;
@@ -1215,7 +1220,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoveb-in {
+.animove1-in {
   animation-play-state: running;
   -webkit-animation: movebin 3.60s 0.1s 1 linear;
   -moz-animation: movebin 3.60s 0.1s 1 linear;
@@ -1223,7 +1228,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoveb-out {
+.animove1-out {
   animation-play-state: running;
   -webkit-animation: movebout 3.60s 0.1s 1 linear;
   -moz-animation: movebout 3.60s 0.1s 1 linear;
@@ -1231,7 +1236,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovec-in {
+.animove2-in {
   animation-play-state: running;
   -webkit-animation: movecin 3.60s 0.1s 1 linear;
   -moz-animation: movecin 3.60s 0.1s 1 linear;
@@ -1239,7 +1244,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animovec-out {
+.animove2-out {
   animation-play-state: running;
   -webkit-animation: movecout 3.60s 0.1s 1 linear;
   -moz-animation: movecout 3.60s 0.1s 1 linear;
@@ -1247,7 +1252,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoved-in {
+.animove3-in {
   animation-play-state: running;
   -webkit-animation: movedin 3.60s 0.1s 1 linear;
   -moz-animation: movedin 3.60s 0.1s 1 linear;
@@ -1255,7 +1260,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animoved-out {
+.animove3-out {
   animation-play-state: running;
   -webkit-animation: movedout 3.60s 0.1s 1 linear;
   -moz-animation: movedout 3.60s 0.1s 1 linear;
