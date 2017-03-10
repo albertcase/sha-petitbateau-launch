@@ -233,6 +233,11 @@
     $(".qrcode").on("click", function(){
             $(this).addClass("hidden");
     })
+
+
+    $(".applyhb,.applyBtn").on("click", function(){
+        location.href = "/apply?id=_createId";
+    })
     
 
 
