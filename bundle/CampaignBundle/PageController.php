@@ -74,9 +74,11 @@ class PageController extends Controller {
 	}
 
 	public function testAction() {
-		global $user;
-		echo $user->openid;exit;
-		$this->render('test');
+		set_time_limit(0);
+		$DatabaseAPI = new \Lib\DatabaseAPI();
+		for ($i=0;$i<3000; $i++) {
+			$DatabaseAPI->insertCode("MG00T0021".(4835+$i));
+		}
 	}
 
 	public function clearCookieAction() {
