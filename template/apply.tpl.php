@@ -17,12 +17,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=4b654c5f85">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
-<?php print $type;?>
-<?php print $number;?>
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -46,23 +44,33 @@
 
 <div id="dreambox">
     <div class="section show transition" id="apply">
-        <!-- <div class="ticketcon">
-            <div class="useway">
-                <a href="javascript:void(0);" class="btn useway-1"></a>
-                <a href="javascript:void(0);" class="btn useway-2"></a>
-            </div> 
-            <img src="/build/assets/img/apply-text.png?v=06b8ed2ca4" alt="" width="100%">
-        </div>
+
+        <?php 
+            if($number){ 
+                echo '<div class="tickerule rule-<?php print $type;?> hidden"></div>
+                        <div class="ticketcon">
+                            <a href="javascript:void(0)" class="rulelink"></a>
+                            <div class="tickettext">
+                                <img src="/build/assets/img/store_text.png" alt="" width="100%">
+                            </div>
+                            <div class="ticketcode"> <?php print $number;?> </div>
+                            <img src="/build/assets/img/ticket_bg.png" alt="" width="100%">
+                        </div>'; 
+            }else{
+                echo '<div class="ticketcon">
+                            <div class="useway">
+                                <a href="javascript:void(0);" class="btn useway-1"></a>
+                                <a href="javascript:void(0);" class="btn useway-2"></a>
+                            </div> 
+                            <img src="/build/assets/img/apply-text.png" alt="" width="100%">
+                        </div>';
+            }
+        ?>
+
+
+        <!-- 
  -->
-        <div class="tickerule storerule hidden"></div>
-        <div class="ticketcon">
-            <a href="javascript:void(0)" class="rulelink"></a>
-            <div class="tickettext">
-                <img src="/build/assets/img/store_text.png?v=fe40c8d2f5" alt="" width="100%">
-            </div>
-            <div class="ticketcode">MG00T00000000</div>
-            <img src="/build/assets/img/ticket_bg.png?v=235027cc3f" alt="" width="100%">
-        </div>
+        
 
         <img src="/build/assets/img/bridge.png?v=0099348449" class="bridge" alt="" width="100%">
     </div>
@@ -77,21 +85,21 @@
 
 </div>
 
-<script type="text/javascript" src="/build/assets/js/main.min.js?v=26260f2a99"></script>
+<script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg?v=73d8f4dc4c",
-        "/build/assets/img/boat-1.png?v=5d7ae45abd",
-        "/build/assets/img/boat-yellow.png?v=580498dea6",
-        "/build/assets/img/boat-red.png?v=9d7cf6662f",
-        "/build/assets/img/boat-lightblue.png?v=5270ad33e7",
-        "/build/assets/img/boat-blue.png?v=c72278c622",
-        "/build/assets/img/bridge.png?v=0099348449",
-        "/build/assets/img/slogan.png?v=5b2bbcf0c1",
-        "/build/assets/img/t-1.png?v=c069378db8",
-        "/build/assets/img/ware-1.png?v=6742377a9c",
-        "/build/assets/img/ware-2.png?v=79cb525801",
-        "/build/assets/img/ware-3.png?v=4282944fe7"
+        "/build/assets/img/bg.jpg",
+        "/build/assets/img/boat-1.png",
+        "/build/assets/img/boat-yellow.png",
+        "/build/assets/img/boat-red.png",
+        "/build/assets/img/boat-lightblue.png",
+        "/build/assets/img/boat-blue.png",
+        "/build/assets/img/bridge.png",
+        "/build/assets/img/slogan.png",
+        "/build/assets/img/t-1.png",
+        "/build/assets/img/ware-1.png",
+        "/build/assets/img/ware-2.png",
+        "/build/assets/img/ware-3.png"
     ], $scene = $('#scene');
 
     
@@ -112,6 +120,33 @@
     $(".tickerule").on("click", function(){
         $(this).addClass("hidden");
     })
+
+
+
+    $(".useway-1").on("click", function(){
+        if($(this).hasClass("disabled")) return false;
+        $(this).addClass("disabled");
+
+        pfun.ajaxFun("POST", "/api/apply", {"type": "1"}, "json", function(data){
+            if(data.status == "1"){
+                location.reload();
+            }
+            $(".useway-1").removeClass("disabled");
+        });
+    })
+
+    $(".useway-2").on("click", function(){
+        if($(this).hasClass("disabled")) return false;
+        $(this).addClass("disabled");
+
+        pfun.ajaxFun("POST", "/api/apply", {"type": "2"}, "json", function(data){
+            if(data.status == "1"){
+                location.reload();
+            }
+            $(".useway-2").removeClass("disabled");
+        });
+    })
+
 
 </script>
 

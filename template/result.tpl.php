@@ -96,9 +96,18 @@
 
         <div class="ware el r_ware_1"></div>
 
+        <?php 
+            if($ismy){ 
+                if(count($friends) == 3){ 
+                    echo '<div class="ware el money-2"></div>'; 
+                }else{
+                    echo '<div class="ware el money"></div>';
+                }
+            }else{
+                echo '<div class="ware el money"></div>';
+            }
+        ?>
         
-        <div class="ware el money"></div>
-
         <div class="ware el ancla"></div>
 
         <div class="ware el ball-1"></div>
