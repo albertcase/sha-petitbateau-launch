@@ -74,7 +74,11 @@
                     if($ismy){
                         echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
                     }else{
-                        echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                        if($counts == 3){
+                            echo '<a href="javascript:void(0);" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
+                        }else{
+                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                        }   
                     }
                 ?>  
             </div>
