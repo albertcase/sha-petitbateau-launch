@@ -209,6 +209,16 @@ class DatabaseAPI {
 		return NULL;
 	}
 
+	public function likeBoat($uid, $id) {
+		$sql = "INSERT INTO `ballot` SET `uid` = ?, `bid` = ?"; 
+		$res = $this->connect()->prepare($sql); 
+		$res->bind_param("ss", $uid, $id);
+		if($res->execute()) 
+			return $res->insert_id;
+		else 
+			return FALSE;
+	}
+
 	public function getFriendsById($bid) {
 		$sql = "SELECT uid,nickname FROM `user` WHERE uid in (select uid from ballot where bid = '".intval($bid)."')"; 
 		$res = $this->db->query($sql);
@@ -229,6 +239,20 @@ class DatabaseAPI {
 		if($res->fetch()) {
 			$info = new \stdClass();
 			$info->type = $type;
+			$info->number = $number;
+			return $info;
+		}
+		return NULL;
+	}
+
+	public function getSendCard() {
+		$sql = "SELECT `id`, `number` FROM `card` WHERE `status` = 0"; 
+		$res = $this->connect()->prepare($sql);
+		$res->execute();
+		$res->bind_result($id, $number);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->id = $id;
 			$info->number = $number;
 			return $info;
 		}
