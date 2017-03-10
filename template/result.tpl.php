@@ -18,9 +18,9 @@
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
-    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
+    <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
-<body data-ismy="<?php print $ismy;?>" data-count="<?php print count($friends);?>" data-friends="<?php print json_encode($friends);?>">
+<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -55,6 +55,15 @@
 
 <div id="dreambox">
     <div class="section" id="result">
+            <?php
+                if($ismy){
+                    if($boat == 3){
+                        echo '<a href="javascript:;" class="applyhb"></a>';
+                    }
+                }
+            ?>  
+
+            
             <?php 
                 if($ismy){ 
                     echo '<div class="stepgo stepgo-3">'; 
@@ -63,15 +72,23 @@
                 }
             ?>
             <div class="lave">
-                <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print $boat;?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
                 <?php
                     if($ismy){
-                        echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
+                        if($boat == 3){
+                            echo '<a href="javascript:void(0);" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
+                        }else{
+                            echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
+                        }
                     }else{
-                        echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                        if($boat == 3){
+                            echo '<a href="/" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
+                        }else{
+                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                        }   
                     }
                 ?>  
             </div>
@@ -98,7 +115,7 @@
 
         <?php 
             if($ismy){ 
-                if(count($friends) == 3){ 
+                if($boat == 3){ 
                     echo '<div class="ware el money-2"></div>'; 
                 }else{
                     echo '<div class="ware el money"></div>';
@@ -115,8 +132,8 @@
         <div class="ware el ball-2"></div>
 
         <!-- 0/3 -->
-        <div class="ware el boatele boatstep<?php print count($friends);?>">
-            <div class="r_boat animove<?php print count($friends);?>-in">
+        <div class="ware el boatele boatstep<?php print $boat;?>">
+            <div class="r_boat animove<?php print $boat;?>-in">
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
@@ -125,6 +142,23 @@
     </div>
 
 </div>
+
+<?php if ($boat!=0 && $ismy) {
+?>
+<marquee direction="left" behavior="scroll">
+    <p>
+    <?php 
+
+        foreach ($friends as $key => $value) {
+            if ($key < 3)
+            echo '<span>'.$value['nickname'].' 刚刚给你加速</span>';
+        }      
+    ?>
+    </p>
+</marquee>
+<?php } ?>
+
+
 
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
@@ -171,15 +205,17 @@
                 pfun.formErrorTips("加速成功!");
 
                 if($(".boatele").hasClass("boatstep0")){
-                    $(".r_boat").addClass("animovea-out");
+                    $(".r_boat").addClass("animove0-out");
                 }else if($(".boatele").hasClass("boatstep1")){
-                    $(".r_boat").addClass("animoveb-out");
+                    $(".r_boat").addClass("animove1-out");
                 }else if($(".boatele").hasClass("boatstep2")){
-                    $(".r_boat").addClass("animovec-out");
+                    $(".r_boat").addClass("animove2-out");
                 }else{
-                    $(".r_boat").addClass("animoved-out");
+                    $(".r_boat").addClass("animove3-out");
                 }
 
+            }else{
+                pfun.formErrorTips("加速失败!");
             }
             $(".tadd").removeClass("disabled");
         });
@@ -189,13 +225,18 @@
     
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
-        if($(this).hasClass("animovea-out")){
-            console.log(9);
+        if($(this).hasClass("animove0-out") || $(this).hasClass("animove1-out") || $(this).hasClass("animove2-out") || $(this).hasClass("animove3-out")){
+            location.reload();
         }
     });
 
     $(".qrcode").on("click", function(){
             $(this).addClass("hidden");
+    })
+
+
+    $(".applyhb,.applyBtn").on("click", function(){
+        location.href = "/apply?id=" + _createId;
     })
     
 

@@ -646,6 +646,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .btn {
   width: 50%;
   height: 30px;
+  background: rgba(22, 34, 67, 0.6);
   z-index: 2; }
 
 .btn.startBtn {
@@ -886,7 +887,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 4%;
+  bottom: 6%;
   z-index: 2; }
 
 .iadd, .tadd {
@@ -894,7 +895,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   left: 50%;
   margin: 0 0 0 -25%; }
 
-.iplay {
+.iplay, .applyFriend, .applyBtn {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -922,30 +923,30 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .boatele {
   z-index: 14; }
 
-.boatstep1 {
+.boatstep0 {
   -webkit-animation: wave 2.0s 0.1s infinite linear;
   -moz-animation: wave 2.0s 0.1s infinite linear;
   animation: wave 2.0s 0.1s infinite linear; }
 
-.boatstep2 {
+.boatstep1 {
   -webkit-animation: wave 3.0s 0.1s infinite linear;
   -moz-animation: wave 3.0s 0.1s infinite linear;
   animation: wave 3.0s 0.1s infinite linear;
   z-index: 10; }
 
-.boatstep3 {
+.boatstep2 {
   -webkit-animation: wave 3.60s 0.1s infinite linear;
   -moz-animation: wave 3.60s 0.1s infinite linear;
   animation: wave 3.60s 0.1s infinite linear;
   z-index: 7; }
 
-.boatstep4 {
+.boatstep3 {
   -webkit-animation: wave 4.60s 0.1s infinite linear;
   -moz-animation: wave 4.60s 0.1s infinite linear;
   animation: wave 4.60s 0.1s infinite linear;
   z-index: 4; }
 
-.boatstep1 .r_boat {
+.boatstep0 .r_boat {
   transform: translate(-100%, 0);
   -ms-transform: translate(-100%, 0);
   /* IE 9 */
@@ -956,7 +957,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -moz-transform: translate(-100%, 0);
   /* Firefox */ }
 
-.boatstep2 .r_boat {
+.boatstep1 .r_boat {
   top: 47%;
   margin: 0 0 0 -18%;
   transform: translate(-100%, 0%);
@@ -969,7 +970,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -moz-transform: translate(-100%, 0%);
   /* Firefox */ }
 
-.boatstep3 .r_boat {
+.boatstep2 .r_boat {
   top: 38%;
   margin: 0 0 0 -20%;
   transform: translate(100%, 0%);
@@ -982,7 +983,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   -moz-transform: translate(100%, 0%);
   /* Firefox */ }
 
-.boatstep4 .r_boat {
+.boatstep3 .r_boat {
   top: 22%;
   margin: 0 0 0 -20%;
   transform: translate(-60%, 0%);
@@ -1030,7 +1031,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 44%;
-  bottom: 10%;
+  bottom: 13.5%;
+  font-size: 1.5rem;
+  color: #112351;
+  font-family: 'GravurCondensed-Bold'; }
+
+.tickettime {
+  width: 100%;
+  position: absolute;
+  left: 44%;
+  bottom: 6%;
   font-size: 1.5rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
@@ -1039,19 +1049,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   display: inline-block; }
 
+.ticketcon img {
+  position: relative;
+  z-index: 1; }
+
 .tickettext {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 36%; }
+  bottom: 38%; }
 
 .rulelink {
   width: 40%;
-  height: 6%;
+  height: 9%;
   background: rgba(22, 67, 78, 0.6);
   position: absolute;
   left: 50%;
-  bottom: -1%;
+  bottom: -3%;
   margin: 0 0 0 -20%;
   z-index: 2; }
 
@@ -1070,6 +1084,38 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .rule-2 {
   background: rgba(255, 255, 255, 0.7) url("../img/store.png") center no-repeat;
   background-size: 100% auto; }
+
+marquee {
+  width: 100%;
+  padding: 6px 0;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 1.4rem;
+  color: #fff;
+  z-index: 15; }
+
+marquee p {
+  width: 600px; }
+
+marquee span {
+  width: 200px;
+  text-align: center;
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.applyhb {
+  width: 44%;
+  height: 12%;
+  position: absolute;
+  left: 56%;
+  top: 24%;
+  background: rgba(26, 67, 89, 0.5);
+  z-index: 3; }
 
 /*****************************
 * 常用
