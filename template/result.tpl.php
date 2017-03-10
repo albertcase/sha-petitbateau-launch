@@ -238,6 +238,8 @@
     $(".applyhb,.applyBtn").on("click", function(){
         if($(".qrcode")){
             $(".qrcode").removeClass("hidden");
+        }else{
+            location.href = "/apply";
         } 
     })
 
