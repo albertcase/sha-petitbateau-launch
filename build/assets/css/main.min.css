@@ -1031,7 +1031,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 44%;
-  bottom: 11%;
+  bottom: 13.5%;
   font-size: 1.5rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
@@ -1040,7 +1040,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 44%;
-  bottom: 5%;
+  bottom: 6%;
   font-size: 1.5rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
@@ -1061,11 +1061,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .rulelink {
   width: 40%;
-  height: 6%;
+  height: 9%;
   background: rgba(22, 67, 78, 0.6);
   position: absolute;
   left: 50%;
-  bottom: -1%;
+  bottom: -3%;
   margin: 0 0 0 -20%;
   z-index: 2; }
 
