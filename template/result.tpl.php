@@ -58,7 +58,7 @@
             <?php
                 if($ismy){
                     if($boat == 3){
-                        echo '<a href="javascript:;" class="applyhb"></a>';
+                        echo '<a href="/apply" class="applyhb"></a>';
                     }
                 }
             ?>  
@@ -79,7 +79,7 @@
                 <?php
                     if($ismy){
                         if($boat == 3){
-                            echo '<a href="javascript:void(0);" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
+                            echo '<a href="/apply" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
                         }else{
                             echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
                         }
@@ -234,10 +234,6 @@
     //         $(this).addClass("hidden");
     // })
 
-
-    $(".applyhb,.applyBtn").on("click", function(){
-        location.href = "/apply?id=" + _createId;
-    })
     
 
 
