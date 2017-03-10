@@ -47,7 +47,7 @@
     if($ismy){
         echo '<div class="shareTips hidden"></div>';
         if(!$subscribe){
-            echo '<div class="qrcode"><img src="/build/assets/img/qrcode.png" alt="" width="100%"></div>';
+            echo '<div class="qrcode hidden"><img src="/build/assets/img/qrcode.png" alt="" width="100%"></div>';
         }
     }
 ?> 
@@ -58,7 +58,7 @@
             <?php
                 if($ismy){
                     if($boat == 3){
-                        echo '<a href="/apply" class="applyhb"></a>';
+                        echo '<a href="javascript:void(0);" class="applyhb"></a>';
                     }
                 }
             ?>  
@@ -79,7 +79,7 @@
                 <?php
                     if($ismy){
                         if($boat == 3){
-                            echo '<a href="/apply" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
+                            echo '<a href="javascript:void(0);" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
                         }else{
                             echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
                         }
@@ -235,9 +235,11 @@
         }
     });
 
-    // $(".qrcode").on("click", function(){
-    //         $(this).addClass("hidden");
-    // })
+    $(".applyhb,.applyBtn").on("click", function(){
+        if($(".qrcode")){
+            $(".qrcode").removeClass("hidden");
+        } 
+    })
 
     
 
