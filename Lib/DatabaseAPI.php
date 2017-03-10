@@ -220,6 +220,20 @@ class DatabaseAPI {
 		return $data;
 	}
 	
+	public function getCard($uid) {
+		$sql = "SELECT `type`, `number` FROM `apply` WHERE `uid` = ?"; 
+		$res = $this->connect()->prepare($sql);
+		$res->bind_param("s", $uid);
+		$res->execute();
+		$res->bind_result($type, $number);
+		if($res->fetch()) {
+			$info = new \stdClass();
+			$info->type = $type;
+			$info->number = $number;
+			return $info;
+		}
+		return NULL;
+	}
 
 	public function insertSubmit($data){
 		$sql = "INSERT INTO `submit` SET `uid` = ?, `sex` = ?, `name` = ?, `mobile` = ?, `email` = ?, `store` = ?"; 

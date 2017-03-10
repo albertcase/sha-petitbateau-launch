@@ -104,4 +104,16 @@ class ApiController extends Controller {
     	}
     }
 
+    public function applyAction() {
+    	global $user;
+
+    	$request = $this->request;
+    	$fields = array(
+			'type' => array('notnull', '120'),
+		);
+		$request->validation($fields);
+		$type = $request->request->get('type');
+		
+    }
+
 }
