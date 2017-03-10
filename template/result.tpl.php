@@ -50,7 +50,7 @@
 <?php
     if($ismy){
         echo '<div class="shareTips hidden"></div>';
-        if($subscribe){
+        if(!$subscribe){
             echo '<div class="qrcode"><img src="/build/assets/img/qrcode.png" alt="" width="100%"></div>';
         }
     }
