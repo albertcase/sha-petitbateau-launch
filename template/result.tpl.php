@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat?debug=true"></script>
 </head>
-<body data-ismy="<?php print $ismy;?>" data-friends="<?php print json_encode($friends);?>">
+<body data-ismy="<?php print $ismy;?>" data-count="<?php print count($friends);?>" data-friends="<?php print json_encode($friends);?>">
 <div class="loading" >
     <div class="loading_con">
       <div class="dot"></div>
@@ -33,10 +33,6 @@
   <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
 
-<?php
-    echo $count = count($friends);
-    $friends = json_encode($friends);
-?>
 
 <!-- 横屏代码 -->
 <div id="orientLayer" class="mod-orient-layer">
@@ -63,7 +59,7 @@
     <div class="section" id="result">
         <div class="stepgo stepgo-3">
             <div class="lave">
-                <img src="/build/assets/img/lave-0.png" width="100%" alt="">
+                <img src="/build/assets/img/lave-<?php print $count;?>.png" width="100%" alt="">
             </div>
 
             <div class="footerArea">
@@ -171,6 +167,10 @@
             console.log(9);
         }
     });
+
+    $(".qrcode").on("click", function(){
+            $(this).addClass("hidden");
+    })
     
 
 
