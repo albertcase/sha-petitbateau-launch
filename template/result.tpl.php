@@ -236,7 +236,7 @@
 
 
     $(".applyhb,.applyBtn").on("click", function(){
-        location.href = "/apply?id=_createId";
+        location.href = "/apply?id=" + _createId;
     })
     
 
