@@ -53,11 +53,9 @@
 ?> 
 
 
-
-
 <div id="dreambox">
     <div class="section" id="result">
-        <div class="stepgo stepgo-3">
+        <div class="stepgo <?php if($ismy){echo "stepgo-3"}?> ">
             <div class="lave">
                 <img src="/build/assets/img/lave-<?php print count($friends);?>.png" width="100%" alt="">
             </div>
@@ -120,7 +118,7 @@
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
         "/build/assets/img/ware-3.png"
-    ];
+    ],_createId = getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
@@ -150,15 +148,28 @@
 
 
     $(".tadd").on("click", function(){
-        if($(".boatele").hasClass("boatstep1")){
-            $(".r_boat").addClass("animovea-out");
-        }else if($(".boatele").hasClass("boatstep2")){
-            $(".r_boat").addClass("animoveb-out");
-        }else if($(".boatele").hasClass("boatstep3")){
-            $(".r_boat").addClass("animovec-out");
-        }else{
-            $(".r_boat").addClass("animoved-out");
-        }
+        if($(this).hasClass("disabled")) return false;
+        $(this).addClass("disabled");
+
+        pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
+            if(data.status == "1"){
+                pfun.formErrorTips("加速成功!");
+
+                if($(".boatele").hasClass("boatstep0")){
+                    $(".r_boat").addClass("animovea-out");
+                }else if($(".boatele").hasClass("boatstep1")){
+                    $(".r_boat").addClass("animoveb-out");
+                }else if($(".boatele").hasClass("boatstep2")){
+                    $(".r_boat").addClass("animovec-out");
+                }else{
+                    $(".r_boat").addClass("animoved-out");
+                }
+
+            }
+            $(".tadd").removeClass("disabled");
+        });
+
+
     })
     
 
