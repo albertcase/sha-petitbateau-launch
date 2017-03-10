@@ -58,7 +58,7 @@
             <?php
                 if($ismy){
                     if($boat == 3){
-                        echo '<a href="javascript:;" class="applyhb"></a>';
+                        echo '<a href="/apply" class="applyhb"></a>';
                     }
                 }
             ?>  
@@ -79,7 +79,7 @@
                 <?php
                     if($ismy){
                         if($boat == 3){
-                            echo '<a href="javascript:void(0);" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
+                            echo '<a href="/apply" class="btn applyBtn"></a><img src="/build/assets/img/apply.png" width="100%">';
                         }else{
                             echo '<a href="javascript:void(0);" class="btn iadd"></a><img src="/build/assets/img/iadd.png" width="100%">';
                         }
@@ -87,7 +87,7 @@
                         if($boat == 3){
                             echo '<a href="/" class="btn applyFriend"></a><img src="/build/assets/img/apply_friend.png" width="100%">';
                         }else{
-                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="javascript:void(0);" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
+                            echo '<a href="javascript:void(0);" class="btn tadd"></a><a href="/" class="btn iplay"></a><img src="/build/assets/img/hyBtn.png" width="100%">';
                         }   
                     }
                 ?>  
@@ -134,6 +134,11 @@
         <!-- 0/3 -->
         <div class="ware el boatele boatstep<?php print $boat;?>">
             <div class="r_boat animove<?php print $boat;?>-in">
+                <?php 
+                    if($boat > 1 && $boat < 3){ 
+                        echo '<span class="jiasu"><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>'; 
+                    }
+                ?>
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
@@ -230,14 +235,10 @@
         }
     });
 
-    $(".qrcode").on("click", function(){
-            $(this).addClass("hidden");
-    })
+    // $(".qrcode").on("click", function(){
+    //         $(this).addClass("hidden");
+    // })
 
-
-    $(".applyhb,.applyBtn").on("click", function(){
-        location.href = "/apply?id=" + _createId;
-    })
     
 
 

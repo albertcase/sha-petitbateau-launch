@@ -101,7 +101,7 @@
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
         "/build/assets/img/ware-3.png"
-    ], $scene = $('#scene');
+    ];
 
     
     pfun.loadingFnDoing(allimg, function(){
@@ -110,7 +110,6 @@
 
         // Setup FastClick.
         FastClick.attach(document.body);
-        // $scene.parallax();
     })
 
 
