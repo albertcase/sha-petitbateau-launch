@@ -113,6 +113,7 @@ class ApiController extends Controller {
 		);
 		$request->validation($fields);
 		$type = $request->request->get('type');
+		$WechatApi = new \Lib\WechatAPI();
 		$card = $DatabaseAPI->getCard($user->uid);
 		if ($card) {
 			$data = array('status' => 2, 'msg' =>'已经领取过了');
