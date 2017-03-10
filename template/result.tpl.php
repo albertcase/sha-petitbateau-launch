@@ -134,6 +134,11 @@
         <!-- 0/3 -->
         <div class="ware el boatele boatstep<?php print $boat;?>">
             <div class="r_boat animove<?php print $boat;?>-in">
+                <?php 
+                    if($boat > 1 && $boat < 3){ 
+                        echo '<span class="jiasu"><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>'; 
+                    }
+                ?>
                 <p><?php print $name;?></p>
                 <img src="/build/assets/img/r_boat_<?php print $color;?>.png" width="100%" alt="">
             </div>
