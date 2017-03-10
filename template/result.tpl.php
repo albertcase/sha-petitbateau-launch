@@ -186,13 +186,13 @@
                 pfun.formErrorTips("加速成功!");
 
                 if($(".boatele").hasClass("boatstep0")){
-                    $(".r_boat").addClass("animove1-out");
+                    $(".r_boat").addClass("animove0-out");
                 }else if($(".boatele").hasClass("boatstep1")){
-                    $(".r_boat").addClass("animove2-out");
+                    $(".r_boat").addClass("animove1-out");
                 }else if($(".boatele").hasClass("boatstep2")){
-                    $(".r_boat").addClass("animove3-out");
+                    $(".r_boat").addClass("animove2-out");
                 }else{
-                    $(".r_boat").addClass("animove4-out");
+                    $(".r_boat").addClass("animove3-out");
                 }
 
             }else{
@@ -207,7 +207,7 @@
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
         if($(this).hasClass("animove1-out") || $(this).hasClass("animove2-out") || $(this).hasClass("animove3-out") || $(this).hasClass("animove4-out")){
-            location.href.reload();
+            location.reload();
         }
     });
 
