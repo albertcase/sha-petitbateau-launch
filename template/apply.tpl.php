@@ -54,6 +54,7 @@
                                 <img src="/build/assets/img/store_text.png" alt="" width="100%">
                             </div>
                             <div class="ticketcode"> '.$number.'</div>
+                            <div class="tickettime"> '.$start.' - '.$end.'</div>
                             <img src="/build/assets/img/ticket_bg.png" alt="" width="100%">
                         </div>'; 
             }else{
