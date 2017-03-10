@@ -135,7 +135,7 @@
         <div class="ware el boatele boatstep<?php print $boat;?>">
             <div class="r_boat animove<?php print $boat;?>-in">
                 <?php 
-                    if($boat > 1 && $boat < 3){ 
+                    if($boat >= 1 && $boat < 3){ 
                         echo '<span class="jiasu"><img src="/build/assets/img/jiasu.png" width="100%" alt=""></span>'; 
                     }
                 ?>
@@ -236,8 +236,10 @@
     });
 
     $(".applyhb,.applyBtn").on("click", function(){
-        if($(".qrcode")){
+        if($(".qrcode").length > 0){
             $(".qrcode").removeClass("hidden");
+        }else{
+            location.href = "/apply";
         } 
     })
 
