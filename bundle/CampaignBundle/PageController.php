@@ -19,10 +19,8 @@ class PageController extends Controller {
 			$array = array('type'=>'', 'number'=>'');
 		} else {
 			$start = date("Y.m.d", strtotime($card->dt));
-			$end = date("Y.m.d", strtotime($card->dt." +20day"));
-			echo $start;
-			echo $end;exit;
-			$array = array('type'=>$card->type, 'number'=>$card->number);
+			$end = date("Y.m.d", strtotime($card->dt." +13day"));
+			$array = array('type'=>$card->type, 'number'=>$card->number, 'start'=> $start, 'end' => $end);
 		}
 		$this->render('apply', $array);
 	}
