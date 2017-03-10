@@ -55,6 +55,7 @@
 
 <div id="dreambox">
     <div class="section" id="result">
+            <a href="javascript:;" class="applyhb"></a>
             <?php 
                 if($ismy){ 
                     echo '<div class="stepgo stepgo-3">'; 
