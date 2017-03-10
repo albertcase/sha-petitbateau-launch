@@ -124,7 +124,7 @@
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
         "/build/assets/img/ware-3.png"
-    ],_createId = getQueryString("id");
+    ],_createId = pfun.getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
