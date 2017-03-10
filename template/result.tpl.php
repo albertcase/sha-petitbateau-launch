@@ -135,10 +135,11 @@
 <marquee direction="left" behavior="scroll">
     <p>
     <?php 
+
         foreach ($friends as $key => $value) {
+            if ($key < 3)
             echo '<span>'.$value['nickname'].'刚刚给你加速</span>';
-        }
-            
+        }      
     ?>
     </p>
 </marquee>
