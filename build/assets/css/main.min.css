@@ -553,17 +553,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   opacity: 0;
   visibility: hidden; }
 
-* {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
 /*****************************
  content
 *****************************/
@@ -771,6 +760,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* result */
 .r_ware_1 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_1.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.0s 0.1s infinite linear;
@@ -779,6 +771,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 15; }
 
 .r_ware_2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_2.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.50s 0.1s infinite linear;
@@ -787,6 +782,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 13; }
 
 .r_ware_3 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_3.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.0s 0.1s infinite linear;
@@ -795,6 +793,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 11; }
 
 .r_ware_4 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_4.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.60s 0.1s infinite linear;
@@ -803,6 +804,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 9; }
 
 .r_ware_5 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_5.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.10s 0.1s infinite linear;
@@ -811,6 +815,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 7; }
 
 .r_ware_6 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_6.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.60s 0.1s infinite linear;
