@@ -57,7 +57,6 @@ class PageController extends Controller {
 		}
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$boat = $DatabaseAPI->loadMakeById($id);
-		var_dump($boat);exit;
 		if (!$boat) {
 			$this->redirect("/");
 			exit;
