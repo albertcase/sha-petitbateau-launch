@@ -55,7 +55,9 @@ class PageController extends Controller {
 		}
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$boat = $DatabaseAPI->loadMakeById($id);
-		var_dump($boat);exit;
+		if (!$boat) {
+			$this->redirect("/");
+		}
 		if ($user->uid == $boat->uid) {
 			$ismy = 1;
 		} else {
