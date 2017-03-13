@@ -911,10 +911,10 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .r_boat p {
   font-size: 1.4rem;
   color: #112351;
-  width: 30%;
+  width: 40%;
   text-align: center;
   display: block;
-  margin: 0 0 0 34%;
+  margin: 0 0 0 29%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
