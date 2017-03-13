@@ -11,6 +11,7 @@ class PageController extends Controller {
 		$boat = $DatabaseAPI->loadMakeByUid($user->uid);
 		if ($boat) {
 			$this->redirect("/result?id=".$boat->id);
+			exit;
 		}
 		$this->render('index', array('nickname'=> $user->nickname));
 	}
@@ -52,11 +53,13 @@ class PageController extends Controller {
 		$id = $request->query->get('id') ? $request->query->get('id') : 0;
 		if (!$id) {
 			$this->redirect("/");
+			exit;
 		}
 		$DatabaseAPI = new \Lib\DatabaseAPI();
 		$boat = $DatabaseAPI->loadMakeById($id);
 		if (!$boat) {
 			$this->redirect("/");
+			exit;
 		}
 		if ($user->uid == $boat->uid) {
 			$ismy = 1;
