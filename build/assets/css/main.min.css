@@ -771,6 +771,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* result */
 .r_ware_1 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_1.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.0s 0.1s infinite linear;
@@ -779,6 +782,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 15; }
 
 .r_ware_2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_2.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.50s 0.1s infinite linear;
@@ -787,6 +793,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 13; }
 
 .r_ware_3 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_3.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.0s 0.1s infinite linear;
@@ -795,6 +804,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 11; }
 
 .r_ware_4 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_4.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.60s 0.1s infinite linear;
@@ -803,6 +815,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 9; }
 
 .r_ware_5 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_5.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.10s 0.1s infinite linear;
@@ -811,6 +826,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 7; }
 
 .r_ware_6 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_6.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.60s 0.1s infinite linear;
@@ -819,6 +837,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 5; }
 
 .r_ware_7 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_7.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 5.10s 0.1s infinite linear;
@@ -827,6 +848,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 3; }
 
 .r_ware_8 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_8.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.10s 0.1s infinite linear;
@@ -840,6 +864,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-size: auto 100%; }
 
 .ancla {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ancla.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.2s 0.1s infinite linear;
@@ -848,6 +875,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 12; }
 
 .ball-1 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ball-1.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.0s 0.1s infinite linear;
@@ -856,6 +886,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 7; }
 
 .ball-2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ball-2.png") center bottom no-repeat;
   background-size: auto 100%;
   z-index: 6;
@@ -864,6 +897,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   animation: wave 5.0s 0.1s infinite linear; }
 
 .money {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/money.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.0s 0.1s infinite linear;
@@ -872,6 +908,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 3; }
 
 .money-2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/money-2.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.0s 0.1s infinite linear;
