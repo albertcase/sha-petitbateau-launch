@@ -21,17 +21,20 @@
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
-<div class="loading" >
+<div class="loading">
     <div class="loading_con">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+        <div class="dotAni">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
     </div>
-  <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
+
 
 
 <!-- 横屏代码 -->
@@ -101,18 +104,70 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
+        "/build/assets/img/ancla.png",
+        "/build/assets/img/apply_friend.png",
+        "/build/assets/img/apply-text.png",
+        "/build/assets/img/apply.png",
+        "/build/assets/img/ball-1.png",
+        "/build/assets/img/ball-2.png",
         "/build/assets/img/bg.jpg",
         "/build/assets/img/boat-1.png",
-        "/build/assets/img/boat-yellow.png",
-        "/build/assets/img/boat-red.png",
-        "/build/assets/img/boat-lightblue.png",
         "/build/assets/img/boat-blue.png",
+        "/build/assets/img/boat-lightblue.png",
+        "/build/assets/img/boat-red.png",
+        "/build/assets/img/boat-yellow.png",
+
         "/build/assets/img/bridge.png",
+        "/build/assets/img/dt.png",
+        "/build/assets/img/hyBtn.png",
+        "/build/assets/img/iadd.png",
+
+        "/build/assets/img/jiasu.png",
+        "/build/assets/img/lave-0.png",
+        "/build/assets/img/lave-1.png",
+        "/build/assets/img/lave-2.png",
+
+        "/build/assets/img/lave-3.png",
+        "/build/assets/img/money-2.png",
+        "/build/assets/img/money.png",
+        "/build/assets/img/qrcode.png",
+
+        "/build/assets/img/r_boat_blue.png",
+        "/build/assets/img/r_boat_lightblue.png",
+        "/build/assets/img/r_boat_red.png",
+        "/build/assets/img/r_boat_yellow.png",
+
+        "/build/assets/img/r_ware_1.png",
+        "/build/assets/img/r_ware_2.png",
+        "/build/assets/img/r_ware_3.png",
+        "/build/assets/img/r_ware_4.png",
+        "/build/assets/img/r_ware_5.png",
+        "/build/assets/img/r_ware_6.png",
+        "/build/assets/img/r_ware_7.png",
+        "/build/assets/img/r_ware_8.png",
+
+        "/build/assets/img/share.jpg",
+        "/build/assets/img/shareTips.png",
         "/build/assets/img/slogan.png",
+        "/build/assets/img/step-1-text-01.png",
+        "/build/assets/img/step-1-text-02.png",
+        "/build/assets/img/step-1.png",
+        "/build/assets/img/step-2-text-01.png",
+        "/build/assets/img/step-2-text-02.png",
+
+        "/build/assets/img/step-2.png",
+        "/build/assets/img/step-3.png",
+        "/build/assets/img/store.png",
+        "/build/assets/img/storetext-1.png",
+        "/build/assets/img/storetext-2.png",
         "/build/assets/img/t-1.png",
+        "/build/assets/img/ticket_bg.png",
+        "/build/assets/img/tmall.png",
+
         "/build/assets/img/ware-1.png",
         "/build/assets/img/ware-2.png",
-        "/build/assets/img/ware-3.png"
+        "/build/assets/img/ware-3.png",
+        "/build/assets/img/ware-4.png",
     ], createInfo = {
         "name": "",
         "color": ""

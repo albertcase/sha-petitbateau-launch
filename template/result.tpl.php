@@ -21,17 +21,20 @@
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
-<div class="loading" >
+<div class="loading">
     <div class="loading_con">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+        <div class="dotAni">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
     </div>
-  <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
+
 
 
 <!-- 横屏代码 -->
@@ -168,10 +171,14 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg",
-        "/build/assets/img/ware-1.png",
-        "/build/assets/img/ware-2.png",
-        "/build/assets/img/ware-3.png"
+        "/build/assets/img/r_ware_1.png",
+        "/build/assets/img/r_ware_2.png",
+        "/build/assets/img/r_ware_3.png",
+        "/build/assets/img/r_ware_4.png",
+        "/build/assets/img/r_ware_5.png",
+        "/build/assets/img/r_ware_6.png",
+        "/build/assets/img/r_ware_7.png",
+        "/build/assets/img/r_ware_8.png",
     ],_createId = pfun.getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";

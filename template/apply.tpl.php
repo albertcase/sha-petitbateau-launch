@@ -21,17 +21,20 @@
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
 </head>
 <body>
-<div class="loading" >
+<div class="loading">
     <div class="loading_con">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+        <div class="dotAni">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
     </div>
-  <p>目前涌入的小伙伴过多<br>页面正在跳转中，请耐心等待。</p>
 </div>
+
 
 
 <!-- 横屏代码 -->
@@ -54,7 +57,7 @@
                                 <img src="/build/assets/img/storetext-'.$type.'.png" alt="" width="100%">
                             </div>
                             <div class="ticketcode"> '.$number.'</div>
-                            <div class="tickettime"> '.$start.' - '.$end.'</div>
+                            <div class="tickettime"> '.$end.'</div>
                             <img src="/build/assets/img/ticket_bg.png" alt="" width="100%">
                         </div>'; 
             }else{
@@ -89,18 +92,8 @@
 <script type="text/javascript" src="/build/assets/js/main.min.js"></script>
 <script type="text/javascript">
     var allimg = [
-        "/build/assets/img/bg.jpg",
-        "/build/assets/img/boat-1.png",
-        "/build/assets/img/boat-yellow.png",
-        "/build/assets/img/boat-red.png",
-        "/build/assets/img/boat-lightblue.png",
-        "/build/assets/img/boat-blue.png",
-        "/build/assets/img/bridge.png",
-        "/build/assets/img/slogan.png",
-        "/build/assets/img/t-1.png",
-        "/build/assets/img/ware-1.png",
-        "/build/assets/img/ware-2.png",
-        "/build/assets/img/ware-3.png"
+        "/build/assets/img/store.png",
+        "/build/assets/img/tmall.png",
     ];
 
     
