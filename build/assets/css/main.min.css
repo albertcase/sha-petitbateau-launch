@@ -905,7 +905,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   position: absolute;
   left: 50%;
   margin: 0 0 0 -6.5%;
-  top: 62%;
+  top: 60%;
   z-index: 2; }
 
 .r_boat p {
@@ -957,7 +957,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep1 .r_boat {
-  top: 47%;
+  top: 45%;
   margin: 0 0 0 -18%;
   transform: translate(-100%, 0%);
   -ms-transform: translate(-100%, 0%);
@@ -970,7 +970,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep2 .r_boat {
-  top: 38%;
+  top: 36%;
   margin: 0 0 0 -20%;
   transform: translate(100%, 0%);
   -ms-transform: translate(100%, 0%);
@@ -983,7 +983,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   /* Firefox */ }
 
 .boatstep3 .r_boat {
-  top: 22%;
+  top: 20%;
   margin: 0 0 0 -20%;
   transform: translate(-60%, 0%);
   -ms-transform: translate(-60%, 0%);
