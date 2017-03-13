@@ -553,6 +553,17 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   opacity: 0;
   visibility: hidden; }
 
+* {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
 /*****************************
  content
 *****************************/
@@ -1257,6 +1268,9 @@ marquee span {
     transform: translate3d(-1%, 0, 0) rotateZ(-3deg); } }
 
 .animove0-in {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: moveain 3.60s 0.1s 1 linear;
   -moz-animation: moveain 3.60s 0.1s 1 linear;
   animation: moveain 3.60s 0.1s 1 linear;
@@ -1264,6 +1278,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove0-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
   -webkit-animation: moveaout 3.60s 0.1s 1 linear;
   -moz-animation: moveaout 3.60s 0.1s 1 linear;
   animation: moveaout 3.60s 0.1s 1 linear;
@@ -1271,6 +1288,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-in {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movebin 3.60s 0.1s 1 linear;
   -moz-animation: movebin 3.60s 0.1s 1 linear;
   animation: movebin 3.60s 0.1s 1 linear;
@@ -1278,6 +1298,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
   -webkit-animation: movebout 3.60s 0.1s 1 linear;
   -moz-animation: movebout 3.60s 0.1s 1 linear;
   animation: movebout 3.60s 0.1s 1 linear;
@@ -1285,6 +1308,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-in {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movecin 3.60s 0.1s 1 linear;
   -moz-animation: movecin 3.60s 0.1s 1 linear;
   animation: movecin 3.60s 0.1s 1 linear;
@@ -1292,6 +1318,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
   -webkit-animation: movecout 3.60s 0.1s 1 linear;
   -moz-animation: movecout 3.60s 0.1s 1 linear;
   animation: movecout 3.60s 0.1s 1 linear;
@@ -1299,6 +1328,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-in {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movedin 3.60s 0.1s 1 linear;
   -moz-animation: movedin 3.60s 0.1s 1 linear;
   animation: movedin 3.60s 0.1s 1 linear;
@@ -1306,6 +1338,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
   -webkit-animation: movedout 3.60s 0.1s 1 linear;
   -moz-animation: movedout 3.60s 0.1s 1 linear;
   animation: movedout 3.60s 0.1s 1 linear;
