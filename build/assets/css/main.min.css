@@ -619,23 +619,23 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 .boat-1 {
   background: url("../img/boat-1.png") center bottom no-repeat;
-  background-size: auto 96%; }
+  background-size: auto 95%; }
 
 .boat-yellow {
   background: url("../img/boat-yellow.png") center bottom no-repeat;
-  background-size: auto 96%; }
+  background-size: auto 95%; }
 
 .boat-red {
   background: url("../img/boat-red.png") center bottom no-repeat;
-  background-size: auto 96%; }
+  background-size: auto 95%; }
 
 .boat-lightblue {
   background: url("../img/boat-lightblue.png") center bottom no-repeat;
-  background-size: auto 96%; }
+  background-size: auto 95%; }
 
 .boat-blue {
   background: url("../img/boat-blue.png") center bottom no-repeat;
-  background-size: auto 96%; }
+  background-size: auto 95%; }
 
 .btnArea {
   width: 100%;
