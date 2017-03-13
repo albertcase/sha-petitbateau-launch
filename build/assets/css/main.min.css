@@ -1257,7 +1257,6 @@ marquee span {
     transform: translate3d(-1%, 0, 0) rotateZ(-3deg); } }
 
 .animove0-in {
-  animation-play-state: running;
   -webkit-animation: moveain 3.60s 0.1s 1 linear;
   -moz-animation: moveain 3.60s 0.1s 1 linear;
   animation: moveain 3.60s 0.1s 1 linear;
@@ -1265,7 +1264,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove0-out {
-  animation-play-state: running;
   -webkit-animation: moveaout 3.60s 0.1s 1 linear;
   -moz-animation: moveaout 3.60s 0.1s 1 linear;
   animation: moveaout 3.60s 0.1s 1 linear;
@@ -1273,7 +1271,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-in {
-  animation-play-state: running;
   -webkit-animation: movebin 3.60s 0.1s 1 linear;
   -moz-animation: movebin 3.60s 0.1s 1 linear;
   animation: movebin 3.60s 0.1s 1 linear;
@@ -1281,7 +1278,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-out {
-  animation-play-state: running;
   -webkit-animation: movebout 3.60s 0.1s 1 linear;
   -moz-animation: movebout 3.60s 0.1s 1 linear;
   animation: movebout 3.60s 0.1s 1 linear;
@@ -1289,7 +1285,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-in {
-  animation-play-state: running;
   -webkit-animation: movecin 3.60s 0.1s 1 linear;
   -moz-animation: movecin 3.60s 0.1s 1 linear;
   animation: movecin 3.60s 0.1s 1 linear;
@@ -1297,7 +1292,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-out {
-  animation-play-state: running;
   -webkit-animation: movecout 3.60s 0.1s 1 linear;
   -moz-animation: movecout 3.60s 0.1s 1 linear;
   animation: movecout 3.60s 0.1s 1 linear;
@@ -1305,7 +1299,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-in {
-  animation-play-state: running;
   -webkit-animation: movedin 3.60s 0.1s 1 linear;
   -moz-animation: movedin 3.60s 0.1s 1 linear;
   animation: movedin 3.60s 0.1s 1 linear;
@@ -1313,7 +1306,6 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-out {
-  animation-play-state: running;
   -webkit-animation: movedout 3.60s 0.1s 1 linear;
   -moz-animation: movedout 3.60s 0.1s 1 linear;
   animation: movedout 3.60s 0.1s 1 linear;
