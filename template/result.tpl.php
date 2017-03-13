@@ -192,7 +192,7 @@
 
         _v.sectionChange("result");
         pfun.init();
-
+        $(".r_boat").addClass("moveAnimate");
         // Setup FastClick.
         FastClick.attach(document.body);
         // $scene.parallax();
