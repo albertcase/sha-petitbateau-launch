@@ -192,9 +192,6 @@
 
         _v.sectionChange("result");
         pfun.init();
-        if( $(".r_boat").hasClass("moveAnimate")){
-            $(".r_boat").removeClass("moveAnimate");    
-        }
         $(".r_boat").addClass("moveAnimate");
         // Setup FastClick.
         FastClick.attach(document.body);
