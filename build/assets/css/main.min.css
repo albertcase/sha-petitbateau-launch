@@ -886,7 +886,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 6%;
+  bottom: 7.5%;
   z-index: 2; }
 
 .iadd, .tadd {
@@ -1038,9 +1038,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .tickettime {
   width: 100%;
   position: absolute;
-  left: 44%;
+  left: 63%;
   bottom: 6%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
 
