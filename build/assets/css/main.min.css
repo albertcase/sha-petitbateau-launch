@@ -760,6 +760,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /* result */
 .r_ware_1 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_1.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.0s 0.1s infinite linear;
@@ -768,6 +771,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 15; }
 
 .r_ware_2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_2.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 2.50s 0.1s infinite linear;
@@ -776,6 +782,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 13; }
 
 .r_ware_3 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_3.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.0s 0.1s infinite linear;
@@ -784,6 +793,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 11; }
 
 .r_ware_4 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_4.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.60s 0.1s infinite linear;
@@ -792,6 +804,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 9; }
 
 .r_ware_5 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_5.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.10s 0.1s infinite linear;
@@ -800,6 +815,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 7; }
 
 .r_ware_6 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_6.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.60s 0.1s infinite linear;
@@ -808,6 +826,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 5; }
 
 .r_ware_7 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_7.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 5.10s 0.1s infinite linear;
@@ -816,6 +837,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 3; }
 
 .r_ware_8 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/r_ware_8.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.10s 0.1s infinite linear;
@@ -829,6 +853,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-size: auto 100%; }
 
 .ancla {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ancla.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 3.2s 0.1s infinite linear;
@@ -837,6 +864,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 12; }
 
 .ball-1 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ball-1.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 4.0s 0.1s infinite linear;
@@ -845,6 +875,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 7; }
 
 .ball-2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/ball-2.png") center bottom no-repeat;
   background-size: auto 100%;
   z-index: 6;
@@ -853,6 +886,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   animation: wave 5.0s 0.1s infinite linear; }
 
 .money {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/money.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.0s 0.1s infinite linear;
@@ -861,6 +897,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 3; }
 
 .money-2 {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   background: url("../img/money-2.png") center bottom no-repeat;
   background-size: auto 100%;
   -webkit-animation: wave 6.0s 0.1s infinite linear;
@@ -1033,13 +1072,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 2; }
 
 .useway-1 {
-  margin: 0 0 6% 0; }
+  height: 42px;
+  margin: 0 0 12% 0; }
 
 .ticketcode {
   width: 100%;
   position: absolute;
   left: 44%;
-  bottom: 13.5%;
+  bottom: 16%;
   font-size: 1.5rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
@@ -1047,9 +1087,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .tickettime {
   width: 100%;
   position: absolute;
-  left: 63%;
-  bottom: 6%;
-  font-size: 1.3rem;
+  left: 60%;
+  bottom: 10.5%;
+  font-size: 1.2rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
 
@@ -1085,7 +1125,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 16; }
 
 .rule-1 {
-  background: rgba(255, 255, 255, 0.7) url("../img/tmall.png") center no-repeat;
+  background: rgba(255, 255, 255, 0.7) url("../img/rule_text.png") center no-repeat;
   background-size: 100% auto; }
 
 .rule-2 {
@@ -1257,7 +1297,9 @@ marquee span {
     transform: translate3d(-1%, 0, 0) rotateZ(-3deg); } }
 
 .animove0-in {
-  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: moveain 3.60s 0.1s 1 linear;
   -moz-animation: moveain 3.60s 0.1s 1 linear;
   animation: moveain 3.60s 0.1s 1 linear;
@@ -1265,6 +1307,8 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove0-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
   animation-play-state: running;
   -webkit-animation: moveaout 3.60s 0.1s 1 linear;
   -moz-animation: moveaout 3.60s 0.1s 1 linear;
@@ -1273,7 +1317,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-in {
-  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movebin 3.60s 0.1s 1 linear;
   -moz-animation: movebin 3.60s 0.1s 1 linear;
   animation: movebin 3.60s 0.1s 1 linear;
@@ -1281,6 +1327,8 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove1-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
   animation-play-state: running;
   -webkit-animation: movebout 3.60s 0.1s 1 linear;
   -moz-animation: movebout 3.60s 0.1s 1 linear;
@@ -1289,7 +1337,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-in {
-  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movecin 3.60s 0.1s 1 linear;
   -moz-animation: movecin 3.60s 0.1s 1 linear;
   animation: movecin 3.60s 0.1s 1 linear;
@@ -1297,6 +1347,8 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove2-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
   animation-play-state: running;
   -webkit-animation: movecout 3.60s 0.1s 1 linear;
   -moz-animation: movecout 3.60s 0.1s 1 linear;
@@ -1305,7 +1357,9 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-in {
-  animation-play-state: running;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
   -webkit-animation: movedin 3.60s 0.1s 1 linear;
   -moz-animation: movedin 3.60s 0.1s 1 linear;
   animation: movedin 3.60s 0.1s 1 linear;
@@ -1313,6 +1367,8 @@ marquee span {
   animation-fill-mode: both; }
 
 .animove3-out {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
   animation-play-state: running;
   -webkit-animation: movedout 3.60s 0.1s 1 linear;
   -moz-animation: movedout 3.60s 0.1s 1 linear;
@@ -1427,3 +1483,8 @@ marquee span {
     -webkit-transform: translate(90%, 40%) rotate(3deg);
     -moz-transform: translate(90%, 40%) rotate(3deg);
     transform: translate(90%, 40%) rotate(3deg); } }
+
+.r_boat.moveAnimate {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running; }

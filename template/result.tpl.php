@@ -19,8 +19,17 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?16431e4327c0351ac1e096d03b6288d6";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
-<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
+<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>" data-subscribe="<?php print $subscribe;?>">
 <div class="loading">
     <div class="loading_con">
         <div class="dotAni">
@@ -49,7 +58,7 @@
 <?php
     if($ismy){
         echo '<div class="shareTips hidden"></div>';
-        if(!$subscribe){
+        if($subscribe==0){
             echo '<div class="qrcode hidden"><img src="/build/assets/img/qrcode.png" alt="" width="100%"></div>';
         }
     }
@@ -192,7 +201,8 @@
 
         _v.sectionChange("result");
         pfun.init();
-
+        $(".r_boat").addClass("moveAnimate");
+        $(".ware").addClass("moveAnimate");
         // Setup FastClick.
         FastClick.attach(document.body);
         // $scene.parallax();
@@ -200,6 +210,7 @@
 
 
     $(".iadd").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'SPEED']);
         $(".shareTips").removeClass("hidden");
     })
 
@@ -211,11 +222,14 @@
     $(".tadd").on("click", function(){
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
-
+        _hmt.push(['_trackEvent', 'btn', 'likes']);
         pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
             if(data.status == "1"){
                 pfun.formErrorTips("加速成功!");
-
+                if($(".jiasu").length > 0){
+                    $(".jiasu").hide();
+                }
+                
                 if($(".boatele").hasClass("boatstep0")){
                     $(".r_boat").addClass("animove0-out");
                 }else if($(".boatele").hasClass("boatstep1")){
@@ -238,11 +252,14 @@
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
         if($(this).hasClass("animove0-out") || $(this).hasClass("animove1-out") || $(this).hasClass("animove2-out") || $(this).hasClass("animove3-out")){
+
             location.reload();
         }
     });
 
     $(".applyhb,.applyBtn").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'RECIEVECOUPON']);
+
         if($(".qrcode").length > 0){
             $(".qrcode").removeClass("hidden");
         }else{
@@ -250,8 +267,15 @@
         } 
     })
 
+
+    $(".iplay").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'PLAY2']);
+    })
     
 
+    $(".applyFriend").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'PLAY3']);
+    })
 
 </script>
 

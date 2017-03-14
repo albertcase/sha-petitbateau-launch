@@ -19,6 +19,15 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?16431e4327c0351ac1e096d03b6288d6";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <div class="loading">
@@ -50,11 +59,11 @@
 
         <?php 
             if($number){ 
-                echo '<div class="tickerule rule-'.$type.' hidden"></div>
+                echo '<div class="tickerule rule-1 hidden"></div>
                         <div class="ticketcon">
                             <a href="javascript:void(0)" class="rulelink"></a>
                             <div class="tickettext">
-                                <img src="/build/assets/img/storetext-'.$type.'.png" alt="" width="100%">
+                                <img src="/build/assets/img/storetext-1.png" alt="" width="100%">
                             </div>
                             <div class="ticketcode"> '.$number.'</div>
                             <div class="tickettime"> '.$end.'</div>
@@ -64,7 +73,7 @@
                 echo '<div class="ticketcon">
                             <div class="useway">
                                 <a href="javascript:void(0);" class="btn useway-1"></a>
-                                <a href="javascript:void(0);" class="btn useway-2"></a>
+                                <!-- <a href="javascript:void(0);" class="btn useway-2"></a> -->
                             </div> 
                             <img src="/build/assets/img/apply-text.png" alt="" width="100%">
                         </div>';
@@ -76,7 +85,7 @@
  -->
         
 
-        <img src="/build/assets/img/bridge.png?v=0099348449" class="bridge" alt="" width="100%">
+        <img src="/build/assets/img/bridge.png" class="bridge" alt="" width="100%">
     </div>
 
     <div class="warelist applywarelist">
@@ -120,6 +129,8 @@
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
 
+        _hmt.push(['_trackEvent', 'btn', 'TMALL']);
+
         pfun.ajaxFun("POST", "/api/apply", {"type": "1"}, "json", function(data){
             if(data.status == "1"){
                 location.reload();
@@ -128,17 +139,19 @@
         });
     })
 
-    $(".useway-2").on("click", function(){
-        if($(this).hasClass("disabled")) return false;
-        $(this).addClass("disabled");
+    // $(".useway-2").on("click", function(){
+    //     if($(this).hasClass("disabled")) return false;
+    //     $(this).addClass("disabled");
 
-        pfun.ajaxFun("POST", "/api/apply", {"type": "2"}, "json", function(data){
-            if(data.status == "1"){
-                location.reload();
-            }
-            $(".useway-2").removeClass("disabled");
-        });
-    })
+    //     _hmt.push(['_trackEvent', 'btn', 'STORE']);
+
+    //     pfun.ajaxFun("POST", "/api/apply", {"type": "2"}, "json", function(data){
+    //         if(data.status == "1"){
+    //             location.reload();
+    //         }
+    //         $(".useway-2").removeClass("disabled");
+    //     });
+    // })
 
 
 </script>
