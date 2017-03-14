@@ -1078,7 +1078,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 44%;
-  bottom: 13.5%;
+  bottom: 16%;
   font-size: 1.5rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
@@ -1086,9 +1086,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .tickettime {
   width: 100%;
   position: absolute;
-  left: 63%;
-  bottom: 6%;
-  font-size: 1.3rem;
+  left: 60%;
+  bottom: 10.5%;
+  font-size: 1.2rem;
   color: #112351;
   font-family: 'GravurCondensed-Bold'; }
 
@@ -1124,7 +1124,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   z-index: 16; }
 
 .rule-1 {
-  background: rgba(255, 255, 255, 0.7) url("../img/tmall.png") center no-repeat;
+  background: rgba(255, 255, 255, 0.7) url("../img/rule_text.png") center no-repeat;
   background-size: 100% auto; }
 
 .rule-2 {
