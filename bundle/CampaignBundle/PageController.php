@@ -75,7 +75,6 @@ class PageController extends Controller {
     	} else {
     		$subscribe = 0;
     	}
-    	var_dump($subscribe);exit;
     	$boatcount = count($friends)>3 ? 3 : count($friends);
 		$this->render('result', array('subscribe' => $subscribe, 'ismy' => $ismy, 'name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends, 'row' => count($friends), 'boat' => $boatcount));
 	}
