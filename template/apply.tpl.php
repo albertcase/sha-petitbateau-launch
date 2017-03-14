@@ -19,6 +19,15 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?16431e4327c0351ac1e096d03b6288d6";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 <div class="loading">
@@ -120,6 +129,8 @@
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
 
+        _hmt.push(['_trackEvent', 'btn', 'TMALL']);
+
         pfun.ajaxFun("POST", "/api/apply", {"type": "1"}, "json", function(data){
             if(data.status == "1"){
                 location.reload();
@@ -131,6 +142,8 @@
     $(".useway-2").on("click", function(){
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
+
+        _hmt.push(['_trackEvent', 'btn', 'STORE']);
 
         pfun.ajaxFun("POST", "/api/apply", {"type": "2"}, "json", function(data){
             if(data.status == "1"){

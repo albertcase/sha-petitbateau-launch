@@ -19,6 +19,15 @@
     <meta name="Description" content="...">
     <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css">
     <script type="text/javascript" src="http://pbwechat.samesamechina.com/api/v1/js/4c360e05-6e2e-465f-8583-9c247cb9465c/wechat"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?16431e4327c0351ac1e096d03b6288d6";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
 <div class="loading">
@@ -201,6 +210,7 @@
 
 
     $(".iadd").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'SPEED']);
         $(".shareTips").removeClass("hidden");
     })
 
@@ -212,7 +222,7 @@
     $(".tadd").on("click", function(){
         if($(this).hasClass("disabled")) return false;
         $(this).addClass("disabled");
-
+        _hmt.push(['_trackEvent', 'btn', 'likes']);
         pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
             if(data.status == "1"){
                 pfun.formErrorTips("加速成功!");
@@ -248,6 +258,8 @@
     });
 
     $(".applyhb,.applyBtn").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'RECIEVECOUPON']);
+
         if($(".qrcode").length > 0){
             $(".qrcode").removeClass("hidden");
         }else{
@@ -255,8 +267,15 @@
         } 
     })
 
+
+    $(".iplay").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'PLAY2']);
+    })
     
 
+    $(".applyFriend").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'PLAY3']);
+    })
 
 </script>
 
