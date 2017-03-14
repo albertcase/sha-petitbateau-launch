@@ -70,12 +70,12 @@ class PageController extends Controller {
 
     	$WechatApi = new \Lib\WechatAPI();
     	$rs = $WechatApi ->isUserSubscribed($user->openid);
-    	var_dump($rs);exit;
     	if ($rs) {
     		$subscribe = 1;
     	} else {
     		$subscribe = 0;
     	}
+    	var_dump($subscribe);exit;
     	$boatcount = count($friends)>3 ? 3 : count($friends);
 		$this->render('result', array('subscribe' => $subscribe, 'ismy' => $ismy, 'name' => $boat->name, 'color' => $boat->color, 'createtime' => $boat->dt, 'friends'=> $friends, 'row' => count($friends), 'boat' => $boatcount));
 	}
