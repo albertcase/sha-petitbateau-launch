@@ -216,15 +216,15 @@
         pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
             if(data.status == "1"){
                 pfun.formErrorTips("加速成功!");
-
+                if($(".jiasu").length > 0){
+                    $(".jiasu").hide();
+                }
+                
                 if($(".boatele").hasClass("boatstep0")){
                     $(".r_boat").addClass("animove0-out");
                 }else if($(".boatele").hasClass("boatstep1")){
                     $(".r_boat").addClass("animove1-out");
                 }else if($(".boatele").hasClass("boatstep2")){
-                    if($(".jiasu").length > 0){
-                        $(".jiasu").hide();
-                    }
                     $(".r_boat").addClass("animove2-out");
                 }else{
                     $(".r_boat").addClass("animove3-out");
