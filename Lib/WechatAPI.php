@@ -31,7 +31,6 @@ class WechatAPI {
 		$url = "http://pbwechat.samesamechina.com/wechat/user/status?openid=". $openid;
 		$return = file_get_contents($url);
 		$rs = json_decode($return);
-		var_dump($rs);exit;
 		if(isset($rs->code) && $rs->code == 10)
 		  return TRUE;
 		else
