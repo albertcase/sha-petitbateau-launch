@@ -29,7 +29,7 @@
         })();
     </script>
 </head>
-<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>">
+<body data-ismy="<?php print $ismy;?>" data-countf="<?php print $row;?>" data-count="<?php print $boat;?>" data-subscribe="<?php print $subscribe;?>">
 <div class="loading">
     <div class="loading_con">
         <div class="dotAni">
