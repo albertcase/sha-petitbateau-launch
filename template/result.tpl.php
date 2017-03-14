@@ -58,7 +58,7 @@
 <?php
     if($ismy){
         echo '<div class="shareTips hidden"></div>';
-        if(!$subscribe){
+        if($subscribe==0){
             echo '<div class="qrcode hidden"><img src="/build/assets/img/qrcode.png" alt="" width="100%"></div>';
         }
     }
