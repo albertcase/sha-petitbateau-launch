@@ -70,6 +70,7 @@ class PageController extends Controller {
 
     	$WechatApi = new \Lib\WechatAPI();
     	$rs = $WechatApi ->isUserSubscribed($user->openid);
+    	var_dump($rs);exit;
     	if ($rs) {
     		$subscribe = 1;
     	} else {
