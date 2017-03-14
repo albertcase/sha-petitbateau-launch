@@ -222,6 +222,9 @@
                 }else if($(".boatele").hasClass("boatstep1")){
                     $(".r_boat").addClass("animove1-out");
                 }else if($(".boatele").hasClass("boatstep2")){
+                    if($(".jiasu").length > 0){
+                        $(".jiasu").hide();
+                    }
                     $(".r_boat").addClass("animove2-out");
                 }else{
                     $(".r_boat").addClass("animove3-out");
@@ -239,6 +242,7 @@
 
     $(".r_boat").bind("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){
         if($(this).hasClass("animove0-out") || $(this).hasClass("animove1-out") || $(this).hasClass("animove2-out") || $(this).hasClass("animove3-out")){
+
             location.reload();
         }
     });
