@@ -59,7 +59,7 @@
 
         <?php 
             if($number){ 
-                echo '<div class="tickerule rule-1 hidden"></div>
+                echo '<div class="tickerule rule-1 hidden"><a href="javascript:void(0);" class="close"></a></div>
                         <div class="ticketcon">
                             <a href="javascript:void(0)" class="rulelink"></a>
                             <div class="tickettext">

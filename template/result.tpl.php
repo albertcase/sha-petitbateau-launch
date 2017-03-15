@@ -264,7 +264,22 @@
         }
     });
 
-    $(".applyhb,.applyBtn").on("click", function(){
+    $(".applyhb").on("click", function(){
+        _hmt.push(['_trackEvent', 'btn', 'RECIEVECOUPON红包']);
+        if($("body").attr("data-count") < 3){
+            if($(".qrcode").length > 0){
+                $(".qrcode").removeClass("hidden");
+            }else{
+                location.href = "/apply";
+            } 
+        }else{
+            if($("body").attr("data-ismy") == 1){
+                $(".shareTips").removeClass("hidden");
+            }
+        }
+    })
+
+    $(".applyBtn").on("click", function(){
         _hmt.push(['_trackEvent', 'btn', 'RECIEVECOUPON']);
 
         if($(".qrcode").length > 0){
