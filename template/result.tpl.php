@@ -266,7 +266,7 @@
 
     $(".applyhb").on("click", function(){
         _hmt.push(['_trackEvent', 'btn', 'RECIEVECOUPON红包']);
-        if($("body").attr("data-count") < 3){
+        if($("body").attr("data-count") == 3){
             if($(".qrcode").length > 0){
                 $(".qrcode").removeClass("hidden");
             }else{
