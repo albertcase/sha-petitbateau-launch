@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=a3dcc5dd23">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=35ec74b3a1">
 </head>
 <body>
 
@@ -44,7 +44,9 @@
         <div class="mod-orient-layer__desc">为了更好的体验，请解锁横屏浏览<br><em>建议全程在wifi环境下观看</em></div>
     </div>
 </div>
-
+<div class="jiasuTips hidden">
+    <a href="javascript:void(0);" class="close"></a>
+</div>
 <div class="shareTips hidden"></div>
 <div class="qrcode hidden">
     <img src="/build/assets/img/qrcode.png?v=44d68f7dbc" alt="" width="100%">
@@ -161,6 +163,13 @@
 
     $(".qrcode").on("click", function(){
             $(this).addClass("hidden");
+    })
+
+
+    $(".close").on("click", function(){
+        if(!$(this).parent("div").hasClass("hidden")){
+            $(this).parent("div").addClass("hidden");
+        };
     })
 
 

@@ -55,6 +55,11 @@
     </div>
 </div>
 
+<div class="gRuleText hidden">
+    <a href="javascript:void(0);" class="close"></a>
+</div>
+
+
 <div id="dreambox">
     <div class="section" id="index">
         <div class="slogan">
@@ -64,6 +69,11 @@
         <div class="btnArea">
             <a href="javascript:void(0);" class="btn startBtn"></a>
             <img src="/build/assets/img/t-1.png" alt="" width="100%">
+
+            <div class="gRuleLink">
+                <a href="javascript:void(0)"></a>
+                <img src="/build/assets/img/gRule.png" alt="" width="100%">
+            </div>
         </div>
 
         <img src="/build/assets/img/bridge.png" class="bridge" alt="" width="100%">
@@ -236,6 +246,18 @@
             }
             $(".goBtn").removeClass("disabled");
         });
+    })
+
+
+    $(".close").on("click", function(){
+        if(!$(this).parent("div").hasClass("hidden")){
+            $(this).parent("div").addClass("hidden");
+        };
+    })
+
+    $(".gRuleLink a").on("click", function(){
+        _hmt.push(['_trackEvent', 'link', '游戏规则']);
+        $(".gRuleText").removeClass("hidden");
     })
     
 

@@ -64,6 +64,10 @@
     }
 ?> 
 
+<div class="jiasuTips hidden">
+    <a href="javascript:void(0);" class="close"></a>
+</div>
+
 
 <div id="dreambox">
     <div class="section" id="result">
@@ -225,7 +229,10 @@
         _hmt.push(['_trackEvent', 'btn', 'likes']);
         pfun.ajaxFun("POST", "/api/like", {"id": _createId}, "json", function(data){
             if(data.status == "1"){
-                pfun.formErrorTips("加速成功!");
+                // pfun.formErrorTips("加速成功!");
+
+                $(".jiasuTips").removeClass("hidden");
+
                 if($(".jiasu").length > 0){
                     $(".jiasu").hide();
                 }
@@ -276,6 +283,13 @@
     $(".applyFriend").on("click", function(){
         _hmt.push(['_trackEvent', 'btn', 'PLAY3']);
     })
+
+    $(".close").on("click", function(){
+        if(!$(this).parent("div").hasClass("hidden")){
+            $(this).parent("div").addClass("hidden");
+        };
+    })
+
 
 </script>
 

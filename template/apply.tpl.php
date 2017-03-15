@@ -119,9 +119,9 @@
         $(".tickerule").removeClass("hidden");
     })
 
-    $(".tickerule").on("click", function(){
-        $(this).addClass("hidden");
-    })
+    // $(".tickerule").on("click", function(){
+    //     $(this).addClass("hidden");
+    // })
 
 
 

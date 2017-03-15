@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="Keywords" content="">
     <meta name="Description" content="...">
-    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=a3dcc5dd23">
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/main.min.css?v=35ec74b3a1">
 </head>
 <body>
 <div class="loading">
@@ -54,7 +54,9 @@
             <img src="/build/assets/img/apply-text.png?v=1b2a37a072" alt="" width="100%">
         </div> -->
 
-        <div class="tickerule storerule rule-1 hidden"></div>
+        <div class="tickerule storerule rule-1 hidden">
+            <a href="javascript:void(0);" class="close"></a>
+        </div>
         <div class="ticketcon">
             <a href="javascript:void(0)" class="rulelink"></a>
             <div class="tickettext">
@@ -121,6 +123,13 @@
     // $(".tickerule").on("click", function(){
     //     $(this).addClass("hidden");
     // })
+
+    $(".close").on("click", function(){
+        if(!$(this).parent("div").hasClass("hidden")){
+            $(this).parent("div").addClass("hidden");
+        };
+    })
+
 
 </script>
 
