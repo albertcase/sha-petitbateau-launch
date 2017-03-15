@@ -248,7 +248,7 @@
                 }
 
             }else{
-                pfun.formErrorTips("加速失败!");
+                pfun.formErrorTips("无法加速!");
             }
             $(".tadd").removeClass("disabled");
         });
