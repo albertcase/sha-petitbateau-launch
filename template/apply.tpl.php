@@ -153,6 +153,13 @@
     //     });
     // })
 
+    $(".close").on("click", function(){
+        if(!$(this).parent("div").hasClass("hidden")){
+            $(this).parent("div").addClass("hidden");
+        };
+    })
+
+
 
 </script>
 
