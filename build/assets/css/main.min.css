@@ -650,7 +650,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 16%;
+  bottom: 18%;
   z-index: 2; }
 
 .btn {
