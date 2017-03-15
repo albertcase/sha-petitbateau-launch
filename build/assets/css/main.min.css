@@ -1192,15 +1192,15 @@ marquee span {
   z-index: 10; }
 
 .close {
-  width: 15%;
-  height: 15%;
+  width: 20%;
+  height: 20%;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 2; }
 
 .gRuleText .close {
-  right: 10%;
+  right: 5%;
   top: 27%; }
 
 .jiasuTips {
@@ -1214,11 +1214,11 @@ marquee span {
   z-index: 10; }
 
 .jiasuTips .close {
-  right: 17%;
+  right: 12%;
   top: 32%; }
 
 .tickerule .close {
-  right: 10%;
+  right: 5%;
   top: 5%; }
 
 /*****************************
