@@ -1194,6 +1194,7 @@ marquee span {
 .close {
   width: 20%;
   height: 20%;
+  background: rgba(23, 35, 89, 0.5);
   position: absolute;
   right: 0;
   top: 0;

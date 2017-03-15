@@ -73,9 +73,9 @@
     <div class="section" id="result">
             <?php
                 if($ismy){
-                    if($boat == 3){
+                    
                         echo '<a href="javascript:void(0);" class="applyhb"></a>';
-                    }
+                  
                 }
             ?>  
 
