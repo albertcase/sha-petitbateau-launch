@@ -195,7 +195,7 @@
     ],_createId = pfun.getQueryString("id");
 
     shareArr["_title"] = "Petit Bateau丨快来帮我的小船加速吧！";
-    shareArr["_desc"] = "一起出发，畅游快乐的海洋！";
+    shareArr["_desc"] = "Petit Bateau丨快来帮我的小船加速吧！";
     shareArr["_desc_friend"] = "一起出发，畅游快乐的海洋！";
     shareArr["_link"] = window.location.href;
 
